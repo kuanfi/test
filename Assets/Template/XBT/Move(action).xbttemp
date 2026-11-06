@@ -1,0 +1,34 @@
+{
+  "type": "action",
+  "name": "Move",
+  "id": "f9qkqntliaf-ms755yzb-fdse73i4s5l_1",
+  "varArr": [
+    {
+      "name": "speed",
+      "type": "Float",
+      "val": 3
+    },
+    {
+      "name": "usePathfinding",
+      "type": "Bool",
+      "val": false
+    },
+    {
+      "name": "moveAnimationClip",
+      "type": "String",
+      "val": ""
+    }
+  ],
+  "ecaScript": {
+    "fileId": "xj7z8xq108-ms6yoi6u-qvlkvdyl43",
+    "_tag": {
+      "type": "GFileRefer"
+    },
+    "fileType": "ugcscript"
+  },
+  "iscustom": true,
+  "desc": "Controls the entity to move toward a target point stored in a node blackboard variable at the specified speed. The target point can be dynamically updated through ECA/FCG, other nodes, or the Move node itself. The node also supports configuring the movement animation and whether pathfinding is enabled.",
+  "icon": "General_Customize_20",
+  "fileId": "0t49xpgkjag9-ms75ym1z-thmoe6ez7zp"
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

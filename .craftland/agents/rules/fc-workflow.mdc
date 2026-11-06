@@ -1,0 +1,120 @@
+---
+description: Trigger for every Craftland Studio FC coding task; routes symbol lookup, asset validation, edits, and full compile validation.
+globs: "**/*.{fcg,fcc}"
+alwaysApply: false
+---
+
+# Craftland Studio FC Workflow
+
+This file is the official FC task entry point referenced by `AGENTS.md`. Any agent handling `.fcg`, `.fcc`, FC symbols, FC imports, FC diagnostics, or Craftland Studio asset references must read and follow this workflow first.
+
+## Project Layout
+
+- `Assets/`: user project content. `.fcg` and `.fcc` files here are editable source.
+- `Temp/UGCLanguage/fcconfig.json`: toolchain config. Read `CompilerExecutable`, `CorePath`, `EditorGenLibPath`, and `MinimumExtensionVersion` first.
+- `Temp/UGCLanguage/editorGen/EditorGenLib.fcc`: current project generated symbols, including registered scene objects, custom events, custom enums, custom components, and declare graphs. Read-only reference.
+- `Temp/UGCLanguage/editorGen/<libId>.fcc`: referenced package generated symbols. Read-only reference.
+- `Temp/UGCLanguage/packages/<libId>/`: referenced package source. Treat as read-only unless the user explicitly asks to edit package source.
+
+## Task Routing
+
+- If the task involves any FC symbol that code may reference, read `.craftland/agents/skills/fc-symbol-lookup/SKILL.md` first. This includes APIs, standard libraries, imports, types, function signatures, events, enums, components, generated project symbols, declare graphs, and public properties.
+- If the task involves Craftland Studio asset validity, read `.craftland/agents/skills/fc-asset-check/SKILL.md` first. This includes assets, UI objects, scene entities, assetIds, entityIds, script attachments, button bindings, and current editor state.
+- If the task makes FC code use any project asset, scene, scene entity, or UI widget — create it, switch to it, read it, bind to it, anything that names one — read `.craftland/agents/skills/fc-asset-registration/SKILL.md` first. The default move is: check through MCP whether the target is registrable, register it, and use the generated `ERes*` / `Res` symbols. The same skill applies when working with code that already uses `ERes*` / `EResKey*` / `Res` symbols.
+- If the task involves complex FC grammar, syntax errors, or an unfamiliar language form, read `.craftland/agents/references/fc-syntax.md`. It is a syntax-only reference derived from `FCGLexer.g4` and `FCGParser.g4`.
+- If any `.fcg` / `.fcc` file is edited, read and execute `.craftland/agents/skills/fc-lint-fix/SKILL.md` before the final response.
+
+When multiple skills are needed, use this order: symbol lookup -> asset check -> asset registration -> edit -> full compile validation. `fc-lint-fix` is the highest-priority closing step.
+
+## FC Required Idioms
+
+Prefer explicit FC idioms over syntax borrowed from other languages:
+
+- `.fcg` files put imports before `graph`.
+- Library import: `import "StdLibrary.fcc" as StdLib`.
+- Script reference import: `import ScriptName as Alias from "path"`.
+- Graph fields are declared directly: `isJumping bool`.
+- Fields, parameters, and variables use `name Type`: `func Move(player entity<Player>)`.
+- Function return type goes after the parameter list: `func GetCount() int`.
+- Current attached entity: `thisEntity<Transform>.Position`.
+- Component access: `entity<Component>.Field`.
+- Vector construction: `Vector3{x, y, z}`.
+- Vector component access: `pos.X`, `pos.Y`, `pos.Z`.
+- HUD button callback: `func OnClick(button entity<UIWidgetButton>, player entity<Player>)`.
+- Async calls: `wait Func()` or `start Func()`.
+- For loops: `for i = start, max, step {}` or `for i, item in list {}`.
+- Type conversion: `expr as Type`; type expression: `typeof(Type)`.
+- `out` parameter call: `out var name`.
+
+## Execution Order
+
+1. Decide whether the task involves FC code, FC declarations, FC diagnostics, or generated project symbols.
+2. Read the required skills according to task routing.
+3. Before writing code, verify source-of-truth data. Do not fill in APIs, imports, types, events, enums, components, graph names, assetIds, or entityIds from memory.
+4. Before referencing generated project symbols, verify them through `fc-symbol-lookup`. Before referencing assetIds or entityIds, verify them through `fc-asset-check`.
+5. Unless the user explicitly asks otherwise, edit only user-owned FC files under `Assets/`.
+6. After editing `.fcg` / `.fcc`, run the lint/fix loop.
+7. If the task changed editor-owned assets, UI, scene entities, or script attachments through MCP, finish with Craftland Studio MCP `game-build` + `game-console-get-logs`.
+8. In the final response, report lint or build status and any missing toolchain config.
+
+## Source-Of-Truth Order
+
+When verifying FC symbols and Craftland Studio assets, choose sources by task type:
+
+- FC symbols: use standard library `.fcc`, `EditorGenLib.fcc`, `editorGen/<libId>.fcc`, and referenced package `.fcc` files. Search likely `.fcc` files by semantic domain first, then fall back to all available `.fcc` files. This is the responsibility of `fc-symbol-lookup`.
+- Craftland Studio assets and current editor state: use Craftland Studio MCP when available and current editor state is needed. Read `instructions://index` first, then use tools such as `asset-list`, `asset-get`, `asset-entity-get`, `asset-entity-search`, `asset-entity-update`, and `entity-eca-script-update` as needed. This is the responsibility of `fc-asset-check`. The `fc-asset-registration-list` / `fc-asset-registration-upsert` / `fc-asset-registration-remove` tools are the responsibility of `fc-asset-registration`.
+
+Referenced package `.fcc` / `.fcg` files under `Temp/UGCLanguage/packages/<libId>/` are only lookup sources. Do not generate imports using that physical path. Use the `.fcc` filename or existing relative import style; `fcconfig.json` directory protocols let the compiler resolve it.
+
+If no source confirms a symbol or asset reference, do not generate code that uses it. Report which source is missing.
+
+## FC Asset Registration
+
+Asset registration is how project assets (Prefab, CSV, UI, Scene, Texture, Sound, and other supported types) are exposed to FC code. Registering generates `ERes*` element-typed enums (a member IS the asset id — static access, the default) and the `Res` declare graph (dynamic access for runtime-computed keys) in `EditorGenLib.fcc`.
+
+**Registration-first policy**: whenever FC code is about to use an asset, scene, scene entity, or UI widget known at edit time, first check `fc-asset-registration-list` to see whether its type is registrable (`supportedTypes`); if it is, register it and use the generated symbols. Name-based lookup APIs and raw string parameters are acceptable only when the type is not registrable or the target is genuinely decided at runtime.
+
+Registration bypasses to reject (they compile, but they are wrong):
+
+- Passing an asset/scene/entity/widget name or id as a string literal to an API parameter that identifies an asset, e.g. `SwitchScene("Fishing Break Scene")` — correct is `SwitchScene(EResScene.IsleLand)` after registering the scene.
+- Locating an edit-time-known entity or widget through a find-by-name API instead of registering it.
+- Casting hardcoded id strings to asset id types, or writing enum-like constants for assets.
+
+Craftland Studio is the authority for asset registration. Do not fake registration by writing FC code, and do not hand-edit editor-owned files such as `ResourceRegisteration.asset` or `EditorGenLib.fcc`.
+
+Generated symbol details, compile-verified usage examples, the MCP registration workflow, and constraints are defined in `.craftland/agents/skills/fc-asset-registration/SKILL.md`. Read it before writing FC code that references assets or before calling `fc-asset-registration-*` tools.
+
+## Lint Delivery
+
+Pure `.fcg` / `.fcc` text edits are not complete until full `fccompile.exe -i Assets -agent <model> -session <session-id>` validation has run.
+
+- `-agent` identifies the **model**, not the coding-agent host product. Use the exact model identifier exposed by your system or runtime. Do not write product names such as `codex`, `cursor`, or `aismith`, and do not guess a model name; use `unknown-model` only when no model identity is available.
+- `-session` identifies the current conversation only. Prefer the stable session/conversation ID exposed by your host. If none is available, generate one globally unique ID once, keep it for the entire conversation, and reuse it for every compile. Never generate a new ID per invocation. The ID must not contain user, project, path, prompt, or other private content.
+- Use only letters, digits, `-`, and `_` in both values; replace other characters with `-`.
+
+Every compiling invocation must carry both values. If the task also changed editor-owned assets, UI, scene entities, or script attachments through MCP, final validation must use Craftland Studio MCP `game-build` + `game-console-get-logs`, because local compiler validation can miss editor integration issues. Model/session rules, the old-compiler fallback, compiler lookup, command details, and the fix loop are defined in `.craftland/agents/skills/fc-lint-fix/SKILL.md`.
+
+The final response for FC edits must state:
+
+- Whether lint or build validation ran.
+- Which compiler path was used.
+- Whether validation passed.
+- If validation could not run, which path, config, or MCP tool is missing.
+- If validation failed, a short summary of remaining errors.
+
+## Hard Rules
+
+- Do not invent FC APIs, imports, types, component names, event names, enum values, graph names, assetIds, or entityIds.
+- Do not bypass asset registration. This includes passing asset/scene/entity/widget names or ids as string literals to asset-identifying API parameters, using find-by-name APIs for edit-time-known targets, casting hardcoded id strings to asset id types, and writing enum-like constants for assets. When FC code needs an asset known at edit time, use the registered `ERes*` enum members (or `Res` map lookups for runtime keys); if they do not exist, register the asset first (see FC Asset Registration).
+- Do not edit `EditorGenLib.fcc` or referenced package generated `.fcc` files as source.
+- Do not deliver FC edits without full compile validation results. If validation cannot run, report whether `CompilerExecutable`, `CorePath`, `EditorGenLibPath`, generated `.fcc` libraries, or the plugin install is missing.
+- If this workflow conflicts with `AGENTS.md`, `AGENTS.md` wins.
+
+## High-Frequency FC Self-Check
+
+- Use the FC idioms above for entity access, graph fields, vectors, callbacks, async calls, loops, and casts.
+- Library APIs, events, types, and generated project symbols must be verified through `fc-symbol-lookup`.
+- Platform decorators must match the target runtime side.
+- For client-only or server-only event handling, put `[platform_client]` or `[platform_server]` on the `graph`, not on an event listener inside the graph body.
+- UI callback signatures and control component fields must be verified through `fc-symbol-lookup`; current UI controls and `button.clickHandlers` must be verified through `fc-asset-check`.
+- Any string literal that names an asset, scene, entity, or widget is a registration smell: it should almost always be an `ERes*` enum member (or a `Res` map lookup for runtime keys) instead.

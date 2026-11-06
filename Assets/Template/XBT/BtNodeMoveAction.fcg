@@ -1,0 +1,109 @@
+import "StdLibrary.fcc" as StdLibrary
+import "Time.fcc" as Time
+import "Scene.fcc" as Scene
+import "List.fcc" as List
+import "Math.fcc" as Math
+import "Animation.fcc" as Animation
+import "BehaviourTree.fcc" as BehaviourTree
+
+[platform_server]
+graph BtNodeMoveAction {
+    m_Speed float = 3.0
+    m_UsePathfinding bool = true
+    m_MoveAnimationClip string
+    m_Destination Vector3 = Vector3{10, 0, 10}
+
+    m_Owner entity<BevTreeAttachable>
+    m_TickInterval float = 0.033
+    m_PathFinding bool = false
+    m_Moving bool = false
+    m_PathPoints List<Vector3>
+    m_PathIndex int = 0
+
+    // enter node
+    event OnNodeEnter(nodeName string, owner entity<BevTreeAttachable>) {
+        m_Owner = owner
+        m_TickInterval = owner<BevTreeAttachable>.AttachTarget<BevTree>.TickInterval * 0.001
+        GetNodeVariable(thisEntity<BevTreeCustomNode>, "speed", out var speed)
+        m_Speed = speed as float
+        GetNodeVariable(thisEntity<BevTreeCustomNode>, "usePathfinding", out var usePathfinding)
+        m_UsePathfinding = usePathfinding as bool
+        GetNodeVariable(thisEntity<BevTreeCustomNode>, "moveAnimationClip", out var clipName)
+        m_MoveAnimationClip = clipName
+        GetBlackboardValue(owner<BevTreeAttachable>.AttachTarget<BevTree>, "moveDestination", out var destination)
+        if destination != nil {
+            m_Destination = destination as Vector3
+        }
+        m_Moving = false
+        m_PathFinding = true
+        start ComputePath(m_Destination as Vector3)
+    }
+
+    //Start moving to the destination along a navmesh path; smooth toggles client-side smoothing
+    func Move(owner entity<BevTreeAttachable>) BevTreeNodeStatus {
+        if m_PathFinding {
+            return BevTreeNodeStatus.Running
+        }
+
+        if !m_Moving {
+            return BevTreeNodeStatus.Finish
+        }
+
+        if m_PathIndex >= List.Length(m_PathPoints) {
+            m_Moving = false
+            return BevTreeNodeStatus.Finish
+        }
+
+        return BevTreeNodeStatus.Running
+    }
+
+    event OnFixedUpdate() {
+        if !m_Moving || m_PathIndex >= List.Length(m_PathPoints){
+            return
+        }
+        var step = m_Speed * m_TickInterval
+        var current = m_Owner<Transform>.Position
+        var targetPoint = m_PathPoints[m_PathIndex]
+        var remain = Math.Distance(current, targetPoint)
+        if remain <= step {
+            ApplyPosition(m_Owner<Transform>, targetPoint)
+            m_PathIndex++
+        } else {
+            var t = step / remain
+            ApplyPosition(m_Owner<Transform>, Math.LerpVector3(current, targetPoint, t))
+        }
+    }
+
+    //Pathfind from the current position to the destination, then start walking the path
+    async func ComputePath(destination Vector3) {
+        if m_UsePathfinding {
+            var startPos = m_Owner<Transform>.Position
+            wait Scene.FindPath(startPos, destination, out var isSuccess, out var points)
+            if !isSuccess {
+                m_PathFinding = false
+                return
+            }
+            m_PathPoints = points
+        }else {
+            m_PathPoints = List<Vector3>{destination}
+        }
+
+        m_PathIndex = 0
+        StartMove()
+    }
+
+    // start move and play the move animation
+    func StartMove() {
+        m_Moving = true
+        m_PathFinding = false
+        if m_MoveAnimationClip != nil && m_MoveAnimationClip != "" {
+            PlayAnimation(m_Owner<AnimationControllerAttachable>, m_MoveAnimationClip, 1.0, LoopType.Loop)
+        }
+    }
+
+    //Write the position, using client-side smoothing when useSmooth is on
+    func ApplyPosition(target entity<Transform>, pos Vector3) {
+        SetPropertySmoothly(target, Transform.Position, pos)
+    }
+
+}

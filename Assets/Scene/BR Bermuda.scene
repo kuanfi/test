@@ -1,0 +1,1434 @@
+{
+  "_entityName": "BR Bermuda",
+  "_tag": {
+    "type": "Scene"
+  },
+  "_entityId": "ERrxKEef",
+  "children": [
+    {
+      "_entityName": "FE_0_ZZ_SKYENV_SKY",
+      "_tag": {
+        "type": "EnvWeatherEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "yz1jXYqa",
+      "children": [],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 0,
+        "y": 100,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 45,
+        "y": -204,
+        "z": -9
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "curWeatherPresetID": 1,
+      "currentWeather": {
+        "lightColor": {
+          "r": 248,
+          "g": 248,
+          "b": 248,
+          "a": 1
+        },
+        "lightIntensity": 1.06,
+        "darkness": 0.03,
+        "shadowStrength": 0.6,
+        "terrainWetness": 0,
+        "lensFlare": 0.65,
+        "fogColor": {
+          "r": 123,
+          "g": 158,
+          "b": 192,
+          "a": 1
+        },
+        "ambientColor": {
+          "r": 149,
+          "g": 149,
+          "b": 149,
+          "a": 1
+        },
+        "nightMode": false,
+        "resId": "UGC_SKYENV_DAY",
+        "enableFog": true,
+        "fogType": 1,
+        "startDistance": 50,
+        "endDistance": 1000,
+        "density": 0.01,
+        "lightRotation": {
+          "x": 45,
+          "y": -204,
+          "z": -9
+        },
+        "skyMaterial": null
+      }
+    },
+    {
+      "_entityName": "FE_54_XYL_PHOTOFILTER_ENTITY_NAME",
+      "_tag": {
+        "type": "PhotoFilterEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "NWM2uQfG",
+      "children": [],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 0,
+        "y": 100,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "FilterType": -1,
+      "Common": {
+        "Brightness": 1,
+        "Contrast": 1,
+        "Saturation": 1
+      },
+      "Comic": {
+        "Threshold": 0.332,
+        "Range": 0.015,
+        "FlashSpeed": 10,
+        "LineIntensity": 2,
+        "LineSize": 1,
+        "PencilSize": 0.0006,
+        "PencilCorrection": 0.3,
+        "PencilColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      "Drawing": {
+        "PencilSize": 0.0006,
+        "PencilCorrection": 0.5,
+        "PencilColor": {
+          "r": 53,
+          "g": 37,
+          "b": 30,
+          "a": 1
+        },
+        "PaperColor": {
+          "r": 177,
+          "g": 127,
+          "b": 80,
+          "a": 0
+        },
+        "CornerLose": 0.5,
+        "PaperTex": null
+      },
+      "Pixel": {
+        "Pixelisation": 200,
+        "ColorOffset": {
+          "r": 255,
+          "g": 205,
+          "b": 136,
+          "a": 0.2
+        }
+      },
+      "RGBSplit": {
+        "SplitOffset": 0.005
+      },
+      "GoldenAge": {
+        "Intensity": 1,
+        "Warmth": 0
+      },
+      "Cyberpunk": {
+        "EdgeIntensity": 1,
+        "EdgeSize": 0.0013,
+        "EdgeSensitivity": 0.15,
+        "GlitchInterval": 3,
+        "GlitchDuration": 0.1,
+        "EdgeColor1": {
+          "r": 255,
+          "g": 0,
+          "b": 255,
+          "a": 1
+        },
+        "EdgeColor2": {
+          "r": 51,
+          "g": 255,
+          "b": 255,
+          "a": 1
+        },
+        "EdgeNoiseTex": null
+      }
+    },
+    {
+      "_entityName": "BR Route East",
+      "_tag": {
+        "type": "SceneEditEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "xmX8wj1j",
+      "children": [
+        {
+          "_entityName": "Điểm đường đi cho đường cong tùy chỉnh",
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "oa0ExadX",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": -19.583984375,
+            "y": 8.842000007629395,
+            "z": -51.2489013671875
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 18,
+          "itemID": 391,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {},
+          "propsData": {
+            "Roll": 0
+          },
+          "_performanceConfigData": {
+            "ItemID": 391,
+            "MeshCount": 180,
+            "ColliderMeshCount": 0,
+            "MaterialCount": 3,
+            "AnimationCount": 0,
+            "BoneCount": 0,
+            "ParticleEmitterCount": 1,
+            "ParticleCount": 1,
+            "TextureMemory": 541128,
+            "ModelMemory": 8336,
+            "AudioMemory": 0
+          }
+        },
+        {
+          "_entityName": "Điểm đường đi cho đường cong tùy chỉnh (1)",
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "JZjzGa41",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": 2,
+            "y": 0,
+            "z": 2
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 19,
+          "itemID": 391,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {},
+          "propsData": {
+            "Roll": 0
+          },
+          "_performanceConfigData": {
+            "ItemID": 391,
+            "MeshCount": 180,
+            "ColliderMeshCount": 0,
+            "MaterialCount": 3,
+            "AnimationCount": 0,
+            "BoneCount": 0,
+            "ParticleEmitterCount": 1,
+            "ParticleCount": 1,
+            "TextureMemory": 541128,
+            "ModelMemory": 8336,
+            "AudioMemory": 0
+          }
+        }
+      ],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 463.54266357421875,
+        "y": 0,
+        "z": 1161.1903076171875
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "tempIndex": 20,
+      "itemID": 392,
+      "seParent": null,
+      "ecaScripts": [
+        null
+      ],
+      "ecaProps": {
+        "CustomCurvePath": {},
+        "Group": {},
+        "CustomLevelObject": {},
+        "LevelObject": {},
+        "Transform": {},
+        "Entity": {},
+        "Visibility": {}
+      },
+      "propsData": {
+        "PathType": 1,
+        "Length": 58.1334114074707,
+        "ClosedLoop": false,
+        "WayPoints": [
+          {
+            "id": "oa0ExadX",
+            "position": {
+              "x": -19.583984375,
+              "y": 8.842000007629395,
+              "z": -51.2489013671875
+            },
+            "tangent": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "roll": 0
+          },
+          {
+            "id": "JZjzGa41",
+            "position": {
+              "x": 2,
+              "y": 0,
+              "z": 2
+            },
+            "tangent": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "roll": 0
+          }
+        ]
+      },
+      "_performanceConfigData": {
+        "ItemID": 392,
+        "MeshCount": 3,
+        "ColliderMeshCount": 0,
+        "MaterialCount": 1,
+        "AnimationCount": 0,
+        "BoneCount": 0,
+        "ParticleEmitterCount": 0,
+        "ParticleCount": 0,
+        "TextureMemory": 0,
+        "ModelMemory": 974,
+        "AudioMemory": 0
+      }
+    },
+    {
+      "_entityName": "BR Route South",
+      "_tag": {
+        "type": "SceneEditEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "sW2qvmzH",
+      "children": [
+        {
+          "_entityName": "Điểm đường đi cho đường cong tùy chỉnh",
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "oHE8vY4s",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": 44.8841552734375,
+            "y": 9.317912101745605,
+            "z": 92.655029296875
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 21,
+          "itemID": 391,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {},
+          "propsData": {
+            "Roll": 0
+          },
+          "_performanceConfigData": {
+            "ItemID": 391,
+            "MeshCount": 180,
+            "ColliderMeshCount": 0,
+            "MaterialCount": 3,
+            "AnimationCount": 0,
+            "BoneCount": 0,
+            "ParticleEmitterCount": 1,
+            "ParticleCount": 1,
+            "TextureMemory": 541128,
+            "ModelMemory": 8336,
+            "AudioMemory": 0
+          }
+        },
+        {
+          "_entityName": "Điểm đường đi cho đường cong tùy chỉnh (1)",
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "W1nVIueK",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": 2,
+            "y": 0,
+            "z": 2
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 22,
+          "itemID": 391,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {},
+          "propsData": {
+            "Roll": 0
+          },
+          "_performanceConfigData": {
+            "ItemID": 391,
+            "MeshCount": 180,
+            "ColliderMeshCount": 0,
+            "MaterialCount": 3,
+            "AnimationCount": 0,
+            "BoneCount": 0,
+            "ParticleEmitterCount": 1,
+            "ParticleCount": 1,
+            "TextureMemory": 541128,
+            "ModelMemory": 8336,
+            "AudioMemory": 0
+          }
+        }
+      ],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 463.54266357421875,
+        "y": 0,
+        "z": 1161.1903076171875
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "tempIndex": 23,
+      "itemID": 392,
+      "seParent": null,
+      "ecaScripts": [
+        null
+      ],
+      "ecaProps": {
+        "CustomCurvePath": {},
+        "Group": {},
+        "CustomLevelObject": {},
+        "LevelObject": {},
+        "Transform": {},
+        "Entity": {},
+        "Visibility": {}
+      },
+      "propsData": {
+        "PathType": 1,
+        "Length": 100.71857452392578,
+        "ClosedLoop": false,
+        "WayPoints": [
+          {
+            "id": "oHE8vY4s",
+            "position": {
+              "x": 44.8841552734375,
+              "y": 9.317912101745605,
+              "z": 92.655029296875
+            },
+            "tangent": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "roll": 0
+          },
+          {
+            "id": "W1nVIueK",
+            "position": {
+              "x": 2,
+              "y": 0,
+              "z": 2
+            },
+            "tangent": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "roll": 0
+          }
+        ]
+      },
+      "_performanceConfigData": {
+        "ItemID": 392,
+        "MeshCount": 3,
+        "ColliderMeshCount": 0,
+        "MaterialCount": 1,
+        "AnimationCount": 0,
+        "BoneCount": 0,
+        "ParticleEmitterCount": 0,
+        "ParticleCount": 0,
+        "TextureMemory": 0,
+        "ModelMemory": 974,
+        "AudioMemory": 0
+      }
+    },
+    {
+      "_entityName": "BR Route West",
+      "_tag": {
+        "type": "SceneEditEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "MZnC6BTI",
+      "children": [
+        {
+          "_entityName": "Điểm đường đi cho đường cong tùy chỉnh",
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "vySUWuY3",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": 2.501007080078125,
+            "y": -0.4169999957084656,
+            "z": -720.375
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 24,
+          "itemID": 391,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {
+            "CustomCurvePathWayPoint": {},
+            "CustomLevelObject": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {}
+          },
+          "propsData": {
+            "Roll": 0
+          },
+          "_performanceConfigData": {
+            "ItemID": 391,
+            "MeshCount": 180,
+            "ColliderMeshCount": 0,
+            "MaterialCount": 3,
+            "AnimationCount": 0,
+            "BoneCount": 0,
+            "ParticleEmitterCount": 1,
+            "ParticleCount": 1,
+            "TextureMemory": 541128,
+            "ModelMemory": 8336,
+            "AudioMemory": 0
+          }
+        },
+        {
+          "_entityName": "Điểm đường đi cho đường cong tùy chỉnh (1)",
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "ldtJI8oH",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": 2,
+            "y": 0,
+            "z": 2
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 25,
+          "itemID": 391,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {},
+          "propsData": {
+            "Roll": 0
+          },
+          "_performanceConfigData": {
+            "ItemID": 391,
+            "MeshCount": 180,
+            "ColliderMeshCount": 0,
+            "MaterialCount": 3,
+            "AnimationCount": 0,
+            "BoneCount": 0,
+            "ParticleEmitterCount": 1,
+            "ParticleCount": 1,
+            "TextureMemory": 541128,
+            "ModelMemory": 8336,
+            "AudioMemory": 0
+          }
+        }
+      ],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 424.1280822753906,
+        "y": -0.019999999552965164,
+        "z": 1111.3228759765625
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "tempIndex": 26,
+      "itemID": 392,
+      "seParent": null,
+      "ecaScripts": [
+        null
+      ],
+      "ecaProps": {
+        "CustomCurvePath": {},
+        "Group": {},
+        "CustomLevelObject": {},
+        "LevelObject": {},
+        "Transform": {},
+        "Entity": {},
+        "Visibility": {}
+      },
+      "propsData": {
+        "PathType": 1,
+        "Length": 722.3751220703125,
+        "ClosedLoop": false,
+        "WayPoints": [
+          {
+            "id": "vySUWuY3",
+            "position": {
+              "x": 2.501007080078125,
+              "y": -0.4169999957084656,
+              "z": -720.375
+            },
+            "tangent": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "roll": 0
+          },
+          {
+            "id": "ldtJI8oH",
+            "position": {
+              "x": 2,
+              "y": 0,
+              "z": 2
+            },
+            "tangent": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "roll": 0
+          }
+        ]
+      },
+      "_performanceConfigData": {
+        "ItemID": 392,
+        "MeshCount": 3,
+        "ColliderMeshCount": 0,
+        "MaterialCount": 1,
+        "AnimationCount": 0,
+        "BoneCount": 0,
+        "ParticleEmitterCount": 0,
+        "ParticleCount": 0,
+        "TextureMemory": 0,
+        "ModelMemory": 974,
+        "AudioMemory": 0
+      }
+    },
+    {
+      "_entityName": "BR Route North",
+      "_tag": {
+        "type": "SceneEditEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "AYHjPthu",
+      "children": [
+        {
+          "_entityName": "Điểm đường đi cho đường cong tùy chỉnh",
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "OV0kJ00R",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": 69.53802490234375,
+            "y": -0.40700000524520874,
+            "z": 103.87298583984375
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 27,
+          "itemID": 391,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {},
+          "propsData": {
+            "Roll": 0
+          },
+          "_performanceConfigData": {
+            "ItemID": 391,
+            "MeshCount": 180,
+            "ColliderMeshCount": 0,
+            "MaterialCount": 3,
+            "AnimationCount": 0,
+            "BoneCount": 0,
+            "ParticleEmitterCount": 1,
+            "ParticleCount": 1,
+            "TextureMemory": 541128,
+            "ModelMemory": 8336,
+            "AudioMemory": 0
+          }
+        },
+        {
+          "_entityName": "Điểm đường đi cho đường cong tùy chỉnh (1)",
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "voo85H1n",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": -46.364593505859375,
+            "y": 223.66952514648438,
+            "z": -1196.96826171875
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 28,
+          "itemID": 391,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {
+            "CustomCurvePathWayPoint": {},
+            "CustomLevelObject": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {}
+          },
+          "propsData": {
+            "Roll": 0
+          },
+          "_performanceConfigData": {
+            "ItemID": 391,
+            "MeshCount": 180,
+            "ColliderMeshCount": 0,
+            "MaterialCount": 3,
+            "AnimationCount": 0,
+            "BoneCount": 0,
+            "ParticleEmitterCount": 1,
+            "ParticleCount": 1,
+            "TextureMemory": 541128,
+            "ModelMemory": 8336,
+            "AudioMemory": 0
+          }
+        }
+      ],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 473.31341552734375,
+        "y": 0,
+        "z": 959.7057495117188
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "tempIndex": 29,
+      "itemID": 392,
+      "seParent": null,
+      "ecaScripts": [
+        null
+      ],
+      "ecaProps": {
+        "CustomCurvePath": {},
+        "Group": {},
+        "CustomLevelObject": {},
+        "LevelObject": {},
+        "Transform": {},
+        "Entity": {},
+        "Visibility": {}
+      },
+      "propsData": {
+        "PathType": 1,
+        "Length": 1325.0780029296875,
+        "ClosedLoop": false,
+        "WayPoints": [
+          {
+            "id": "OV0kJ00R",
+            "position": {
+              "x": 69.53802490234375,
+              "y": -0.40700000524520874,
+              "z": 103.87298583984375
+            },
+            "tangent": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "roll": 0
+          },
+          {
+            "id": "voo85H1n",
+            "position": {
+              "x": -46.364593505859375,
+              "y": 223.66952514648438,
+              "z": -1196.96826171875
+            },
+            "tangent": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "roll": 0
+          }
+        ]
+      },
+      "_performanceConfigData": {
+        "ItemID": 392,
+        "MeshCount": 3,
+        "ColliderMeshCount": 0,
+        "MaterialCount": 1,
+        "AnimationCount": 0,
+        "BoneCount": 0,
+        "ParticleEmitterCount": 0,
+        "ParticleCount": 0,
+        "TextureMemory": 0,
+        "ModelMemory": 974,
+        "AudioMemory": 0
+      }
+    },
+    {
+      "_entityName": "BR Aircraft",
+      "_tag": {
+        "type": "SceneEditEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "SCB67Nzh",
+      "children": [],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 0,
+        "y": 220,
+        "z": -804.2207641601562
+      },
+      "scale": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "tempIndex": 30,
+      "itemID": 389,
+      "seParent": null,
+      "ecaScripts": [
+        null
+      ],
+      "ecaProps": {
+        "Helicopter": {},
+        "Vehicle": {},
+        "LevelObject": {},
+        "Transform": {},
+        "Entity": {},
+        "Visibility": {},
+        "ResetableEntity": {},
+        "BuffableEntity": {},
+        "FightingEntity": {},
+        "AimableEntity": {}
+      },
+      "propsData": {
+        "resetEveryRound": true,
+        "ForwardSpeed": 800,
+        "BackwardSpeed": 600,
+        "UpSpeed": 700,
+        "DownSpeed": 800,
+        "ExplodeDelay": 5,
+        "ExplodeRange": 2.5,
+        "ExplodeDamage": 100,
+        "BurnTime": 5,
+        "BurnDamage": 10,
+        "BurnInterval": 5,
+        "MaxHP": 300,
+        "GrenadeMinDamage": 50,
+        "GrenadeMaxDamage": 80,
+        "GrenadeRange": 7,
+        "SkinID": null,
+        "vehicleSkinResPath": "",
+        "OverloadByPlayerSkin": false
+      },
+      "_performanceConfigData": {
+        "ItemID": 389,
+        "MeshCount": 4824,
+        "ColliderMeshCount": 32,
+        "MaterialCount": 1,
+        "AnimationCount": 0,
+        "BoneCount": 0,
+        "ParticleEmitterCount": 0,
+        "ParticleCount": 0,
+        "TextureMemory": 405476,
+        "ModelMemory": 214672,
+        "AudioMemory": 0
+      }
+    }
+  ],
+  "prefabVariant": null,
+  "activeValue": {
+    "selfValue": true,
+    "valueTag": "activeValue"
+  },
+  "unlockedValue": {
+    "selfValue": true,
+    "valueTag": "unlockedValue"
+  },
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "discriminator": "ISceneLike",
+  "mapID": 39,
+  "terrainInfo": {
+    "texture": [
+      {
+        "fileId": "e4c65232d3be1e92230bbcfdfd075038",
+        "filePath": "lib://fftextures/WorkshopItemTexture/SceneEdit_Cube_Texture_Grassland_01.png",
+        "_tag": {
+          "type": "GFileRefer"
+        },
+        "fileType": "texture"
+      }
+    ]
+  }
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

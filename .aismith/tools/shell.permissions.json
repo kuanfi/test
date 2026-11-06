@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "tools": {
+    "apply_patch": {
+      "enabled": false,
+      "kind": "structured",
+      "policy": {
+        "fileAccessLevel": 1,
+        "allowedProjectDirs": [
+          "Assets",
+          "ProjectSettings"
+        ],
+        "allowedDirs": [
+          "${projectRoot}"
+        ],
+        "allowedExtensions": [
+          "fcg",
+          "fcc",
+          "csv",
+          "json",
+          "md",
+          "txt"
+        ]
+      }
+    },
+    "fccompile": {
+      "enabled": false,
+      "kind": "structured",
+      "policy": {
+        "fileAccessLevel": 0
+      }
+    },
+    "polyhaven": {
+      "enabled": false,
+      "kind": "structured",
+      "policy": {
+        "fileAccessLevel": 2,
+        "allowedDirs": [
+          "${projectRoot}"
+        ],
+        "networkTermsAccepted": false
+      }
+    },
+    "file-read": {
+      "enabled": false,
+      "kind": "shellCommand",
+      "policy": {
+        "fileAccessLevel": 2,
+        "allowedDirs": [
+          "${projectRoot}"
+        ]
+      }
+    },
+    "text-search": {
+      "enabled": false,
+      "kind": "shellCommand",
+      "policy": {
+        "fileAccessLevel": 2,
+        "allowedDirs": [
+          "${projectRoot}"
+        ]
+      }
+    },
+    "pipeline-util": {
+      "enabled": false,
+      "kind": "shellCommand",
+      "policy": {
+        "fileAccessLevel": 0
+      }
+    },
+    "git": {
+      "enabled": false,
+      "kind": "shellCommand",
+      "policy": {
+        "fileAccessLevel": 2,
+        "allowedDirs": [
+          "${projectRoot}"
+        ],
+        "allowedSubcommands": [
+          "status",
+          "diff",
+          "log",
+          "show"
+        ]
+      }
+    },
+    "rm": {
+      "enabled": false,
+      "kind": "shellCommand",
+      "policy": {
+        "fileAccessLevel": 2,
+        "allowedDirs": [
+          "${projectRoot}"
+        ]
+      }
+    },
+    "cp": {
+      "enabled": false,
+      "kind": "shellCommand",
+      "policy": {
+        "fileAccessLevel": 2,
+        "allowedDirs": [
+          "${projectRoot}"
+        ]
+      }
+    }
+  }
+}

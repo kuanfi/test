@@ -1,0 +1,71 @@
+import "StdLibrary.fcc" as StdLibrary
+import "Time.fcc" as Time
+import "Scene.fcc" as Scene
+import "List.fcc" as List
+import "Math.fcc" as Math
+import "Animation.fcc" as Animation
+import "BehaviourTree.fcc" as BehaviourTree
+
+[platform_client]
+graph CBtNodeMoveAction {
+    m_Speed float = 3.0
+    m_MoveAnimationClip string
+    m_Destination Vector3 = Vector3{10, 0, 10}
+
+    m_Owner entity<BevTreeAttachableForClient>
+    m_TickInterval float = 0.033
+    m_Moving bool = false
+
+    // enter node
+    event OnNodeEnterForClient(nodeName string, owner entity<BevTreeAttachableForClient>) {
+        m_Owner = owner
+        m_TickInterval = owner<BevTreeAttachableForClient>.AttachTarget<BevTree>.TickInterval * 0.001
+        GetNodeVariable(thisEntity<BevTreeCustomNode>, "speed", out var speed)
+        m_Speed = speed as float
+        GetNodeVariable(thisEntity<BevTreeCustomNode>, "moveAnimationClip", out var clipName)
+        m_MoveAnimationClip = clipName
+        GetBlackboardValue(owner<BevTreeAttachableForClient>.AttachTarget<BevTree>, "moveDestination", out var destination)
+        if destination != nil {
+            m_Destination = destination as Vector3
+        }
+        StartMove()
+    }
+
+    //Start moving
+    func Move(owner entity<BevTreeAttachableForClient>) BevTreeNodeStatus {
+        if !m_Moving {
+            return BevTreeNodeStatus.Finish
+        }
+
+        return BevTreeNodeStatus.Running
+    }
+
+    event OnFixedUpdate() {
+        if !m_Moving {
+            return
+        }
+        var step = m_Speed * m_TickInterval
+        var current = m_Owner<Transform>.Position
+        var remain = Math.Distance(current, m_Destination)
+        if remain <= step {
+            ApplyPosition(m_Owner<Transform>, m_Destination)
+        } else {
+            var t = step / remain
+            ApplyPosition(m_Owner<Transform>, Math.LerpVector3(current, m_Destination, t))
+        }
+    }
+
+    // start move and play the move animation
+    func StartMove() {
+        m_Moving = true
+        if m_MoveAnimationClip != nil && m_MoveAnimationClip != "" {
+            // PlayAnimation(m_Owner<AnimationControllerAttachable>, m_MoveAnimationClip, 1.0, LoopType.Loop)
+        }
+    }
+
+    //Write the position, using client-side smoothing when useSmooth is on
+    func ApplyPosition(target entity<Transform>, pos Vector3) {
+        target<Transform>.Position = pos
+    }
+
+}

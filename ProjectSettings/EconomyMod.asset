@@ -1,0 +1,18 @@
+{
+  "_entityName": "Economy模组",
+  "_tag": {
+    "type": "ff.economy"
+  },
+  "_entityId": "jGV2QJ3u",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "modId": 25,
+  "modOpen": true,
+  "customEconomyTypes": [],
+  "customEconomyShops": []
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

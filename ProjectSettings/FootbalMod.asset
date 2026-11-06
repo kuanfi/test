@@ -1,0 +1,16 @@
+{
+  "_entityName": "Football模组",
+  "_tag": {
+    "type": "ff.football"
+  },
+  "_entityId": "IyUXHrBL",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "modId": 7,
+  "modOpen": true
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

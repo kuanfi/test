@@ -1,0 +1,15 @@
+{
+  "_entityName": "",
+  "_tag": {
+    "type": "TRSSettings"
+  },
+  "_entityId": "Zgbw42tw",
+  "enabled": false,
+  "smoothing_method": 2,
+  "max_error_accumulation_seconds": 15,
+  "min_error": 0.1,
+  "max_position_error": 5,
+  "predict_ratio": 1,
+  "predict_blend_ratio": 0.85
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

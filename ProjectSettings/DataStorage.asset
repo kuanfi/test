@@ -1,0 +1,23 @@
+{
+  "_entityName": "FE_39_M_DATA",
+  "_tag": {
+    "type": "ff.DataStorage"
+  },
+  "_entityId": "BnGUWzgc",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "modId": 31,
+  "storageOpen": true,
+  "rankSheets": [],
+  "dataSheets": [],
+  "dataSheetsClient": [],
+  "statisticalSheets": [],
+  "multicolumnSheets": [],
+  "multicolumnSheetsClient": [],
+  "craftlandLeadboard": null
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

@@ -1,0 +1,22 @@
+import "StdLibrary.fcc" as StdLibrary
+import "Animation.fcc" as Animation
+import "BehaviourTree.fcc" as BehaviourTree
+
+[platform_server]
+graph BtNodeIdleAction {
+    m_IdleAnimationClip string
+
+    // enter node
+    event OnNodeEnter(nodeName string, owner entity<BevTreeAttachable>) {
+        GetNodeVariable(thisEntity<BevTreeCustomNode>, "idleAnimationClip", out var clipName)
+        m_IdleAnimationClip = clipName
+    }
+
+    // idle
+    func Idle(owner entity<BevTreeAttachable>) BevTreeNodeStatus {
+        if m_IdleAnimationClip != nil && m_IdleAnimationClip != "" {
+            PlayAnimation(owner<AnimationControllerAttachable>, m_IdleAnimationClip, 1.0, LoopType.Loop)
+        }
+        return BevTreeNodeStatus.Finish
+    }
+}

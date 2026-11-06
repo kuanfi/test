@@ -1,0 +1,24 @@
+{
+  "type": "action",
+  "name": "Idle_Client",
+  "id": "qa7ffoz5qj-msof91c1-wn247v10r_2",
+  "varArr": [
+    {
+      "type": "String",
+      "name": "idleAnimationClip",
+      "val": ""
+    }
+  ],
+  "ecaScript": {
+    "fileId": "w5i6hjbaz8b-msodvs0b-jogscscejg",
+    "_tag": {
+      "type": "GFileRefer"
+    },
+    "fileType": "ugcscript"
+  },
+  "iscustom": true,
+  "desc": "Controls the entity to enter an idle state and play the specified idle animation. The node remains active until it is interrupted by another behavior or an external condition.",
+  "icon": "General_Customize_20",
+  "fileId": "vwka9wmrgo-msofdpqs-ag6um70ghxk"
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

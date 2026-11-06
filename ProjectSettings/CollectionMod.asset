@@ -1,0 +1,17 @@
+{
+  "_entityName": "Collection模组",
+  "_tag": {
+    "type": "ff.collection"
+  },
+  "_entityId": "REbgGKXk",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "modId": 17,
+  "modOpen": true,
+  "enable3PSync": false
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

@@ -1,0 +1,2250 @@
+{
+  "fileId": "fab_stdlibrary",
+  "manifest": {
+    "Name": "stdlibrary",
+    "UUID": "fab_stdlibrary",
+    "Type": "Folder",
+    "Version": 57,
+    "IsFFBuildinRes": false,
+    "Children": [
+      {
+        "Name": "material",
+        "UUID": "",
+        "Type": "Folder",
+        "Version": 0,
+        "IsFFBuildinRes": false,
+        "Children": [
+          {
+            "Name": "defaultmaterial.mat",
+            "UUID": "babbbc4bf711e4b46a1401364e824401",
+            "Type": "Material",
+            "Version": 0,
+            "IsFFBuildinRes": false,
+            "Children": null,
+            "Sprite": null,
+            "AnimationClip": null,
+            "SubMeshCount": 0
+          }
+        ],
+        "Sprite": null,
+        "AnimationClip": null,
+        "SubMeshCount": 0
+      },
+      {
+        "Name": "assets",
+        "UUID": "",
+        "Type": "Folder",
+        "Version": 0,
+        "IsFFBuildinRes": false,
+        "Children": [
+          {
+            "Name": "resources",
+            "UUID": "",
+            "Type": "Folder",
+            "Version": 0,
+            "IsFFBuildinRes": false,
+            "Children": [
+              {
+                "Name": "shaders",
+                "UUID": "",
+                "Type": "Folder",
+                "Version": 0,
+                "IsFFBuildinRes": false,
+                "Children": [
+                  {
+                    "Name": "aofields",
+                    "UUID": "",
+                    "Type": "Folder",
+                    "Version": 0,
+                    "IsFFBuildinRes": false,
+                    "Children": [
+                      {
+                        "Name": "aofields.cginc",
+                        "UUID": "36b9bf0fcd4c4078be2f7d618cb12d40",
+                        "Type": "Text",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "copydepth.shader",
+                        "UUID": "4229465d9d894524d967e2f26274e75b",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "reconstructnormal.cginc",
+                        "UUID": "82adcb72797346b3bd242c95238a5874",
+                        "Type": "Text",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "volume.shader",
+                        "UUID": "4d8e51d25a5847b790701ed9d379a5de",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      }
+                    ],
+                    "Sprite": null,
+                    "AnimationClip": null,
+                    "SubMeshCount": 0
+                  },
+                  {
+                    "Name": "brmobile",
+                    "UUID": "",
+                    "Type": "Folder",
+                    "Version": 0,
+                    "IsFFBuildinRes": false,
+                    "Children": [
+                      {
+                        "Name": "addtive.shader",
+                        "UUID": "cc00e3e9b9ed9d345b01622f4fe4f0ef",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "alphablend.shader",
+                        "UUID": "de9f0ecb6156ccb48b455400637ccb79",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "artunifromlight",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "brmobilepreviewlayerblingphong.shader",
+                            "UUID": "5f42bfb978c734a4dae33e306917bb6b",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilereflectionblinnphong.shader",
+                            "UUID": "2fb99bff9a9e5c34a88136be56c4cd2e",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobileuniformlight.cginc",
+                            "UUID": "52cc1ccc6f14d89409344fbdfd62874c",
+                            "Type": "Text",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "diffuse_simple.shader",
+                            "UUID": "e9c8229459fad9f4f898e6fd418c2e8a",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "ocean_caustics.shader",
+                            "UUID": "22b8ab4a03dfa3440ae78724bf0fbc48",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "skybox_2tex.shader",
+                            "UUID": "d8a39e120d0780a4ebac71ccb8a36f88",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "terrain_blingphong_4map2normal.shader",
+                            "UUID": "03ca97962a9a6654494ff076c6b8c540",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "tree_worldposhue_spec_vertanim.shader",
+                            "UUID": "4f14d31823f0643428dafc26de221ad3",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "twotexmixed_refblinnphong.shader",
+                            "UUID": "82809fe2b9086ea45bcdc9c3f1334322",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "uniformmetapass.shader",
+                            "UUID": "26de8bfa85541f645affb8a9a2954497",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "uniformshadow.shader",
+                            "UUID": "845e20aae5efea94ca2c9b16c8c909cd",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "uv2ref.shader",
+                            "UUID": "055636608832df942830572a19e8fa53",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "avatar",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "avatarcommon.cginc",
+                            "UUID": "f351935dfcc1da64a92638ea71b943e3",
+                            "Type": "Text",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "cloth.cginc",
+                            "UUID": "f30e9783ed6e0a54aab00ef2d3c18eb3",
+                            "Type": "Text",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "seethrough.cginc",
+                            "UUID": "2ebdd616672651443a05139ba18a5d7d",
+                            "Type": "Text",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "skin.cginc",
+                            "UUID": "a1ef4589dc4ee254b928d01a4e0b2c79",
+                            "Type": "Text",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "blend",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "darken.shader",
+                            "UUID": "c949505cfb6030b47b394958199928ad",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "lighten.shader",
+                            "UUID": "2e008eb159d66674f85ebd705b79f3af",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "multiply.shader",
+                            "UUID": "586c04962cf9b454b856b779f1b730f6",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "screen.shader",
+                            "UUID": "c40f88cae11120c45a18e916e300d780",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "bralphablendwithshadow.shader",
+                        "UUID": "54ca7dcd4e843ba4c923155cafd25374",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilealphablendcolor.shader",
+                        "UUID": "50ff4015a1f26974cab9f51841bd034c",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilealphablendcolordiffuse.shader",
+                        "UUID": "98ffe8f7caf930a4d91206d76fcb0a02",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilealphablendseperate.shader",
+                        "UUID": "99881f7507f81864ea2a73c18b1a07e9",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilealphablendtwosidescolor.shader",
+                        "UUID": "f8f5e5b035ca81d44aaef290db49e78b",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilealphablendvertexlit.shader",
+                        "UUID": "25aa300b8831db34881000df43074303",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilealphashadowblendcolor.shader",
+                        "UUID": "48b4c72f8db25e041a68555a022a014d",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileblur.shader",
+                        "UUID": "25f55a62e712fd0438e16be4bccd048f",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilebumpdiffuse.shader",
+                        "UUID": "c940b20c6f9a95842a824654a71a2ddc",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilebumpspec.shader",
+                        "UUID": "0dca1ef3e7bfc324f94b4dbcbd73ab18",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilebumpspecdecal.shader",
+                        "UUID": "bf9837f6bab339e4fbded6e170656d32",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilebumpspecdecal_viewdirchangetexs.shader",
+                        "UUID": "e8859aefb4cdcb0418da65157526fecb",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilebumpspecemissive.shader",
+                        "UUID": "36c8dd3623c8cc64fb1ecb0b1854b591",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilebumpspeclow.shader",
+                        "UUID": "56a1ed48af5c113438af4d7cf4af424e",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilebumpspecmix.shader",
+                        "UUID": "884ec31cdf0f6f640aee7dc82d3b1dc2",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilebumpspecunlit.shader",
+                        "UUID": "00a36db7dad04b6489d66c5d9371f34c",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilebumpspecuvanim.shader",
+                        "UUID": "66162f286f0c45748998c63e71a5919f",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecommon.cginc",
+                        "UUID": "1150b562cf6facc4b8ae07a31ebd4b3b",
+                        "Type": "Text",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecommon_hd.cginc",
+                        "UUID": "44e7234e984f7a04cb25f23b53ae3580",
+                        "Type": "Text",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecommon_ld.cginc",
+                        "UUID": "316622701a639664dafde02a9b9062c0",
+                        "Type": "Text",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecustomshadow.shader",
+                        "UUID": "aa65b166b5649134b85541ae0c729543",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecutoff.shader",
+                        "UUID": "3825bd2c708f0554ea2859109c8688b6",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecutoffcolor.shader",
+                        "UUID": "82e02a0f99e366c4482c6303378fb512",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecutoffmodel.shader",
+                        "UUID": "4617c9a8259fe094bb1092ab2a8c3b25",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecutofftwosidescolor.shader",
+                        "UUID": "7ff7e4f63c32f244fbfc573d3d0c5fb9",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecutofftwosidescolorgroup.shader",
+                        "UUID": "351c9b72bd1a6634b9e74584ea802682",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilecutoffvertexlit.shader",
+                        "UUID": "bd6f62dd2f1533c42a00b47c2c66a7e6",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffuse.shader",
+                        "UUID": "f9b35447b02e0a948aa83c3f0d57d530",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusecolor.shader",
+                        "UUID": "3e97f20c35491ba448d99aaf6a8673cd",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusecolorframetilling.shader",
+                        "UUID": "1b10a33ec3ca89d43ab06034c1ef8a40",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusecolorgroup.shader",
+                        "UUID": "86abb19b63689b540a8304883b294c1b",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusecolortilling.shader",
+                        "UUID": "79a138e1596f4a2499e290ef97271a75",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusecolortillingcombined.shader",
+                        "UUID": "2dff8c497c514ee4bae686ceec53587b",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusecolorwithambientmask.shader",
+                        "UUID": "4faa37e2fe591fa46835b177b38aa9f0",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusecolorwithambientmaskgroup.shader",
+                        "UUID": "1f2a2d276e5fdc74ea7946554607b2db",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusegroupshadow.shader",
+                        "UUID": "f7ac778c440b94748a2b073447844d35",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusegroupshadowrt.shader",
+                        "UUID": "284f901f2f1a83f41af0dacb4a1a78db",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusemaskalpha.shader",
+                        "UUID": "208408edf8883fe48b4beac668b44533",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusemaskalphablend.shader",
+                        "UUID": "1b20d0dd41da28548b5967be06dc2785",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusemaskcolor.shader",
+                        "UUID": "0f4916a9015749d419d25dde7bb5c121",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusenight.shader",
+                        "UUID": "a1d1688c266755e43bc0e54567ecef2e",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusenocastingshadow.shader",
+                        "UUID": "03bd897d880e61a41b64a663e293f0dd",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusenoreceiveshadow.shader",
+                        "UUID": "66ed687a88721b045b99cd0929aa1171",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusepanv.shader",
+                        "UUID": "80851ebfdfea4b7ebb74bc77ee1add19",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffuseswitchnew.shader",
+                        "UUID": "d5f5a459cd0cde940855f372970c30a9",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilediffusetwosidescolor.shader",
+                        "UUID": "77a8e4df10835ab49a18a526fa35e2c3",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilefartreeparadise.shader",
+                        "UUID": "41229e83972e14549b935f19e7a39534",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilefarwater.shader",
+                        "UUID": "b1856d841fe06f142a68eb2269bba82d",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilefresnel.shader",
+                        "UUID": "47859d7353ded694595dd140d60c021c",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilefur.shader",
+                        "UUID": "8f0d694fc9907f047b11ebd536c2634c",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilefurcommon.cginc",
+                        "UUID": "e6492ee7636879b4898fbdd30b408d22",
+                        "Type": "Text",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilefurpass.cginc",
+                        "UUID": "8a1773cb022dada4b8ed5da4c2a08146",
+                        "Type": "Text",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileimagedepthblur.shader",
+                        "UUID": "44782eadc29777145970811abb289f0e",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilemapluminance.shader",
+                        "UUID": "677359bfa5d240f4f9122de5ddf3f14c",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileparticleadd.shader",
+                        "UUID": "f886d930b747e774887beb5c421566ff",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileparticleadditiveortho.shader",
+                        "UUID": "d76d42e674e00cd479eeab4e5c0c5fcb",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileparticlealphablend.shader",
+                        "UUID": "b985fdc9c0438384fb0d0f5e7adc31ae",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileparticlealphablendortho.shader",
+                        "UUID": "47294e50ac33daf4a9d5c7508f3e5833",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileparticlemultiply.shader",
+                        "UUID": "06382d2e5d0571d4bab6f9403444ca13",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileplanereflection.shader",
+                        "UUID": "09a8cc49c309136409d889de8feee28b",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileshallowwater.shader",
+                        "UUID": "5d9dd189d4a4fde4b85dee6904a63c2f",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileskybox.shader",
+                        "UUID": "2d1039a5325321e4c96f70f19e94bd3a",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileskyboxblended.shader",
+                        "UUID": "c4c38c3ec5627e44da3471f229e9164e",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileunlitcutofftwosidescolor.shader",
+                        "UUID": "d3c8368ce9da7bd4aad0a908f6e825c3",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileunlitcutofftwosidescolorgroup.shader",
+                        "UUID": "7faac3284e6ec424992a24baca57b20d",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobileunlitcutofftwosidescolormask.shader",
+                        "UUID": "e96253c2222d45b408e1533190163ea8",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilevegetationparadisenew.shader",
+                        "UUID": "84c51e05df52341459c4a0cb7b63364a",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "brmobilevertexlit.shader",
+                        "UUID": "00aacb4cf4e463d46abf09397bdb746a",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "decal",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "brmobilealphablenddecal.shader",
+                            "UUID": "3b179b405b6c1d94f85fee8eca8c29ef",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "projectiondecal.shader",
+                            "UUID": "1926e393b846c6144ac9ec2ad1bdffac",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "quaddecal.shader",
+                            "UUID": "af491ad8651890c4da7963904f671249",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "effect",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "effect_advanced.shader",
+                            "UUID": "3875a5d3362e2f9438012dfa6b6c2659",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_bumpspecuvanim.shader",
+                            "UUID": "7048e57d9c718134e867aef0614e8469",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_cartoon.shader",
+                            "UUID": "1c088a2ba1e4c2c488e34f5bfbc54555",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_cutoffpanu.shader",
+                            "UUID": "30bee57ce26b75e439bbb02120157098",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_panuv 1.shader",
+                            "UUID": "b0e2f1dfae1e8334281c2fec85676311",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_panuv.shader",
+                            "UUID": "17de11a06cd800c469d1e3800bfff639",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_reflectspecularuvanim.shader",
+                            "UUID": "5f71b7ca1a2c02641a7a9d89db0b40e2",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "effect_2tex_dissolve.shader",
+                        "UUID": "097852bc5ec81fe4291f3662aee57729",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "environment",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "brmobileocean.shader",
+                            "UUID": "224062b39b5ae8e498fed33255255541",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilerivercaustics.shader",
+                            "UUID": "8d511b46716b5f542b30ee9989faeb4f",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilerock.shader",
+                            "UUID": "c561d66c2af0bec4da6ce48a09c8fb37",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilerock_low.shader",
+                            "UUID": "dcfc8b4db208f0340a8c27edad1b0bd9",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilerockgroup.shader",
+                            "UUID": "0515d0c313dbe1b419f45591c9622a62",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilerockgroup_low.shader",
+                            "UUID": "b99790888aee016418acafa3bad6f83f",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilesmallrockgroup.shader",
+                            "UUID": "0c974ab8428438c43aa1339d2a3a217c",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilesmallrockgroup_low.shader",
+                            "UUID": "d69a1a0afc505b74c847c02855bfbec3",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "gem.shader",
+                            "UUID": "3203316b566ed5449a201417132af1c8",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "mobile_foam.shader",
+                            "UUID": "8886aa77c86e1dc468d72e27d917f252",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "road.shader",
+                            "UUID": "dbc6f08ee4eab2f4389814ed5c37f69a",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "indirect",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "indirectdiffusecolor.shader",
+                            "UUID": "2d9ec9079576fff4380674e0c18122e7",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "internal",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "brmobile_particle_additive_clip 1.shader",
+                            "UUID": "6883b5d855e9a8f489496cde7d664aa7",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobile_particle_additive_clip 2.shader",
+                            "UUID": "91f1909ee283a854d988e50372b150ca",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobile_particle_alphablend_clip 1.shader",
+                            "UUID": "0c74f4ac3f60afc44a58df41cad312f8",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobile_particle_alphablend_clip 2.shader",
+                            "UUID": "007d2d5d32301e643a9bb157dc84daaf",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilecastshadowonly.shader",
+                            "UUID": "38a9bf8d1b0c3454e8478231be9f9401",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilecutofftwosidesundershadow.shader",
+                            "UUID": "59250bcc176378f4485c6a25ad7584e5",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilecutoffundershadow.shader",
+                            "UUID": "05f1c585582b1614aae36801737712f8",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilediffusetwosidesundershadow.shader",
+                            "UUID": "b62b87acef5c37748b71ef50a305cebc",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilediffuseundershadow.shader",
+                            "UUID": "e8242b3eda16afb46b3d33d291ad8058",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobileinternalcolor.shader",
+                            "UUID": "a545c55a8a6bec04891cc0176cf6293a",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "diffusemaskalpha_clip 1.shader",
+                            "UUID": "534e4ddd4ce518a43a09d1df01bbc250",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "diffusemaskalpha_clip 2.shader",
+                            "UUID": "a9a470abfcf2ddd44ad959b322163b29",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_2tex_dis_additive_clip 1.shader",
+                            "UUID": "6eed5ce100d8b8d4c9d6adbe6ef18717",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_2tex_dissolve_clip 1.shader",
+                            "UUID": "e8d70093af74f7f4aa558210367234d6",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_reflectspecularuvanim_transparency.shader",
+                            "UUID": "9bd5d262e73334d44a334f5bc6ed5485",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "outlinepurecolor.shader",
+                            "UUID": "c9ba05b9cdb01ff4ba2fc90c361aed12",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "prez.shader",
+                            "UUID": "a4df6dd7e8ef457cb46f728aef67729b",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "scroll2tex_add_clip 1.shader",
+                            "UUID": "902e81c31b2f8294d901c10e96cb07ec",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "scroll2texbend_clip 1.shader",
+                            "UUID": "e37a9cb3b462ee64d8e7042bd31738d8",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "separableblur.shader",
+                            "UUID": "d51d3d7baebc7674a8d47180cd4c9dd6",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "shadowcasterforpc.shader",
+                            "UUID": "b740dfc237056f9429f124ede2517908",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "spine-skeleton_clip 1.shader",
+                            "UUID": "593968f36461a0744a40560754e8fac0",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "spine-skeleton_clip 2.shader",
+                            "UUID": "c70c2d0632ada6842b9472720b716b48",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "lobby",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "brmobilealphablendshadowcolor.shader",
+                            "UUID": "3634c42d4f662354f8d8e5ec7722eba8",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilealphablendshadowcolor_closer.shader",
+                            "UUID": "489adc5015fcef1408216562ea8a8952",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobilealphablendvertexcolor.shader",
+                            "UUID": "9d9de39b994ae8146b9914ae09ee332e",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "brmobileplannarshadow.shader",
+                            "UUID": "c9c11e07bad807c448b14a3359ae5149",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "cloth_vfx.shader",
+                            "UUID": "a6bc14d2204f1134bba2248ba89c6226",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "hair_vfx.shader",
+                            "UUID": "5e77874b052e1da4a94052022d8dff1a",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "skin_vfx.shader",
+                            "UUID": "bbe9381f0d8a9954e9d2274fe2d93c59",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "particle",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "addtive.shader",
+                            "UUID": "a4fc587977208214695e8361e17942d2",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "addtive_decal.shader",
+                            "UUID": "bbcd4008f1e620d4bb1ad9f7601fea81",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "alphablend.shader",
+                            "UUID": "5cdfa83669bbf0647a5725feef10afee",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "alphablendgroup.shader",
+                            "UUID": "450b71e2ced61fd4ab504da16a043c6a",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "effect_2tex_maskrotation.shader",
+                            "UUID": "5a20b65e2444a9242a1f17ae06d84997",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "lit_perparticle.shader",
+                            "UUID": "09be05e94208c6945a25c5e308ba15a6",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "ribbontrails.shader",
+                            "UUID": "f3378ed2a1172bf4bb78a8db7986779c",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "scroll2tex_add.shader",
+                            "UUID": "d1063609a990c634abc825bc039dce28",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "scroll2texbend.shader",
+                            "UUID": "b27583371ce183a40b969600398c4788",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "pbr.cginc",
+                        "UUID": "3dae07fa7bbc5ab40ab6c420cb52d2c3",
+                        "Type": "Text",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "plant",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "speedtree.shader",
+                            "UUID": "263e64ffd7492a64f8ff61ed621d18e1",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "special",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "dissolvepans.shader",
+                            "UUID": "bdaa072f119dc1143b6de1c57bfae7c3",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "singleskybox.shader",
+                            "UUID": "040e3dd821bae514592b01ef9374a16e",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "terrain",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "4map2normal1lightmapglobalrim_paradisesnow.shader",
+                            "UUID": "5ba32caa765c60442ba61566ce0e06e4",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "uifx",
+                        "UUID": "",
+                        "Type": "Folder",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": [
+                          {
+                            "Name": "vfx_advanced.shader",
+                            "UUID": "12ea34072b37b794184c91256c809097",
+                            "Type": "Other",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          },
+                          {
+                            "Name": "vfxshadercommon.cginc",
+                            "UUID": "4a78454316ebc3c47a978b0597429221",
+                            "Type": "Text",
+                            "Version": 0,
+                            "IsFFBuildinRes": false,
+                            "Children": null,
+                            "Sprite": null,
+                            "AnimationClip": null,
+                            "SubMeshCount": 0
+                          }
+                        ],
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      }
+                    ],
+                    "Sprite": null,
+                    "AnimationClip": null,
+                    "SubMeshCount": 0
+                  },
+                  {
+                    "Name": "custombuiltins",
+                    "UUID": "",
+                    "Type": "Folder",
+                    "Version": 0,
+                    "IsFFBuildinRes": false,
+                    "Children": [
+                      {
+                        "Name": "skybox-cubed-linearingamma.shader",
+                        "UUID": "eedbc3215408cbf45b258a9b3065b0f0",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "skybox-procedural.shader",
+                        "UUID": "3fcf51c3d25aef74ba74933ed3860b38",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      }
+                    ],
+                    "Sprite": null,
+                    "AnimationClip": null,
+                    "SubMeshCount": 0
+                  },
+                  {
+                    "Name": "events",
+                    "UUID": "",
+                    "Type": "Folder",
+                    "Version": 0,
+                    "IsFFBuildinRes": false,
+                    "Children": [
+                      {
+                        "Name": "brmobilepixelpaint.shader",
+                        "UUID": "ff3eae5a7d3669d47bee28958facf709",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "sixthbcolorcore.shader",
+                        "UUID": "6e4ad096755d56d4fb89b2c051db5cd6",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      }
+                    ],
+                    "Sprite": null,
+                    "AnimationClip": null,
+                    "SubMeshCount": 0
+                  },
+                  {
+                    "Name": "preloadingshader.shadervariants",
+                    "UUID": "4a93585f88a8f0044899a6e1413643f2",
+                    "Type": "Other",
+                    "Version": 0,
+                    "IsFFBuildinRes": false,
+                    "Children": null,
+                    "Sprite": null,
+                    "AnimationClip": null,
+                    "SubMeshCount": 0
+                  },
+                  {
+                    "Name": "shaderstripsettings.asset",
+                    "UUID": "3e1fd5b725dce3c4688710a2c8aa1586",
+                    "Type": "Other",
+                    "Version": 0,
+                    "IsFFBuildinRes": false,
+                    "Children": null,
+                    "Sprite": null,
+                    "AnimationClip": null,
+                    "SubMeshCount": 0
+                  },
+                  {
+                    "Name": "ugcshader",
+                    "UUID": "",
+                    "Type": "Folder",
+                    "Version": 0,
+                    "IsFFBuildinRes": false,
+                    "Children": [
+                      {
+                        "Name": "brmobilereflectionblinnphong_vertanim.shader",
+                        "UUID": "8e17bc1b93d7f6c4592e8dadeccac6e7",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "broneplaneboolean_ugc.shader",
+                        "UUID": "fc9d478c767a20d46ad3e02f15ab12b9",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "building_cartoon.shader",
+                        "UUID": "f622c73f7950ef647a12d7612e7ea73e",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "reflectspecularugc.shader",
+                        "UUID": "67f302604ba180941992bd08b63e52d6",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "toonoutlineugc.cginc",
+                        "UUID": "adad872cad28a7f45a4cfea65ebd14bb",
+                        "Type": "Text",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "toonoutlineugc.shader",
+                        "UUID": "4ff636b76749a5d479150f450b6b4ab4",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "treeramphueugc.shader",
+                        "UUID": "8bcedb047976c244e921242de522f078",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      },
+                      {
+                        "Name": "water_ugc.shader",
+                        "UUID": "b65bdbcf5cb81dc428d028fe430d4ddd",
+                        "Type": "Other",
+                        "Version": 0,
+                        "IsFFBuildinRes": false,
+                        "Children": null,
+                        "Sprite": null,
+                        "AnimationClip": null,
+                        "SubMeshCount": 0
+                      }
+                    ],
+                    "Sprite": null,
+                    "AnimationClip": null,
+                    "SubMeshCount": 0
+                  }
+                ],
+                "Sprite": null,
+                "AnimationClip": null,
+                "SubMeshCount": 0
+              }
+            ],
+            "Sprite": null,
+            "AnimationClip": null,
+            "SubMeshCount": 0
+          }
+        ],
+        "Sprite": null,
+        "AnimationClip": null,
+        "SubMeshCount": 0
+      }
+    ],
+    "Sprite": null,
+    "AnimationClip": null,
+    "SubMeshCount": 0
+  },
+  "version": "1.0.0"
+}

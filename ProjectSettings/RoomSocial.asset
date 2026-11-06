@@ -1,0 +1,20 @@
+{
+  "_entityName": "FE_53_ZCS_INGAMESOCIALSYS_SOCIALSYSTEM",
+  "_tag": {
+    "type": "ff.RoomSocial"
+  },
+  "_entityId": "mim3fdG3",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "modId": 50,
+  "enableFriendList": true,
+  "enableDialogBox": true,
+  "enablePlayerDetail": true,
+  "showSwitch": false,
+  "enable": true
+}
+//"{FE:{"v":"0.0.0","c":{"FF":5001},"s":100}

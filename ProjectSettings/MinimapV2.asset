@@ -1,0 +1,20 @@
+{
+  "_entityName": "FE_40_XYL_CUSTOMMINIMAP",
+  "_tag": {
+    "type": "ff.MinimapV2"
+  },
+  "_entityId": "whskLurg",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "modId": 34,
+  "hideMinimap": false,
+  "useCustomMinimap": false,
+  "enableDepthMap": false,
+  "modOpen": true,
+  "mapType": null
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

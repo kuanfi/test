@@ -1,0 +1,239 @@
+{
+  "_tag": {
+    "type": "Scene",
+    "resourceId": ""
+  },
+  "_entityId": "OcQ7Wot5",
+  "children": [
+    {
+      "_entityName": "FE_0_ZZ_SKYENV_SKY",
+      "_tag": {
+        "type": "EnvWeatherEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "DPvdIouc",
+      "children": [],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 0,
+        "y": 100,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 45,
+        "y": -204,
+        "z": -9
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "curWeatherPresetID": 1,
+      "currentWeather": {
+        "lightColor": {
+          "r": 248,
+          "g": 248,
+          "b": 248,
+          "a": 1
+        },
+        "lightIntensity": 1.06,
+        "darkness": 0.03,
+        "shadowStrength": 0.6,
+        "terrainWetness": 0,
+        "lensFlare": 0.65,
+        "fogColor": {
+          "r": 123,
+          "g": 158,
+          "b": 192,
+          "a": 1
+        },
+        "ambientColor": {
+          "r": 149,
+          "g": 149,
+          "b": 149,
+          "a": 1
+        },
+        "nightMode": false,
+        "resId": "UGC_SKYENV_DAY",
+        "enableFog": true,
+        "fogType": 1,
+        "startDistance": 50,
+        "endDistance": 1000,
+        "density": 0.01,
+        "lightRotation": {
+          "x": 45,
+          "y": -204,
+          "z": -9
+        },
+        "skyMaterial": null
+      }
+    },
+    {
+      "_entityName": "FE_54_XYL_PHOTOFILTER_ENTITY_NAME",
+      "_tag": {
+        "type": "PhotoFilterEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "ejAHeZ7i",
+      "children": [],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 0,
+        "y": 100,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "FilterType": -1,
+      "Common": {
+        "Brightness": 1,
+        "Contrast": 1,
+        "Saturation": 1
+      },
+      "Comic": {
+        "Threshold": 0.332,
+        "Range": 0.015,
+        "FlashSpeed": 10,
+        "LineIntensity": 2,
+        "LineSize": 1,
+        "PencilSize": 0.0006,
+        "PencilCorrection": 0.3,
+        "PencilColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      "Drawing": {
+        "PencilSize": 0.0006,
+        "PencilCorrection": 0.5,
+        "PencilColor": {
+          "r": 53,
+          "g": 37,
+          "b": 30,
+          "a": 1
+        },
+        "PaperColor": {
+          "r": 177,
+          "g": 127,
+          "b": 80,
+          "a": 0
+        },
+        "CornerLose": 0.5,
+        "PaperTex": null
+      },
+      "Pixel": {
+        "Pixelisation": 200,
+        "ColorOffset": {
+          "r": 255,
+          "g": 205,
+          "b": 136,
+          "a": 0.2
+        }
+      },
+      "RGBSplit": {
+        "SplitOffset": 0.005
+      },
+      "GoldenAge": {
+        "Intensity": 1,
+        "Warmth": 0
+      },
+      "Cyberpunk": {
+        "EdgeIntensity": 1,
+        "EdgeSize": 0.0013,
+        "EdgeSensitivity": 0.15,
+        "GlitchInterval": 3,
+        "GlitchDuration": 0.1,
+        "EdgeColor1": {
+          "r": 255,
+          "g": 0,
+          "b": 255,
+          "a": 1
+        },
+        "EdgeColor2": {
+          "r": 51,
+          "g": 255,
+          "b": 255,
+          "a": 1
+        },
+        "EdgeNoiseTex": null
+      }
+    }
+  ],
+  "prefabVariant": null,
+  "activeValue": {
+    "selfValue": true,
+    "valueTag": "activeValue"
+  },
+  "unlockedValue": {
+    "selfValue": true,
+    "valueTag": "unlockedValue"
+  },
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "discriminator": "ISceneLike",
+  "_entityName": "Bermuda",
+  "mapID": 1,
+  "terrainInfo": {
+    "texture": []
+  }
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

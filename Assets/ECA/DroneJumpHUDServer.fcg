@@ -1,0 +1,40 @@
+import "StdLibrary.fcc" as StdLib
+import "Hud.fcc" as HudLib
+import "EditorGenLib.fcc" as EditorLib
+import "Player.fcc" as PlayerLib
+import "Convert.fcc" as ConvertLib
+import "./DroneDropDiagnostics.fcc" as DiagnosticsLib
+
+[platform_server]
+graph DroneJumpHUDServer {
+    // This graph lives on JumpButton; OnTapped is the current button event.
+    event OnTapped(player entity<Player>) {
+        Trace(player, "OnTapped entry")
+        OnClick(thisEntity<UIWidgetButton>, player)
+    }
+
+    func OnClick(button entity<UIWidgetButton>, player entity<Player>) {
+        Trace(player, "OnClick entry playerNil=" + ToString(player == nil))
+        if player == nil { Trace(player, "RequestJump refused: player=nil")
+            return }
+        RequestJump(player)
+    }
+
+    func RequestJump(player entity<Player>) {
+        var box entity = EResSceneBRBermuda.DroneDropBox
+        Trace(player, "RequestJump before boxNil=" + ToString(box == nil))
+        if box == nil {
+            if DroneDropDiagnostics.DebugLog { LogError("[DroneJump] uid=" + ToString(player<Player>.UserUID) + " RequestJump refused: box=nil") }
+            return
+        }
+        DispatchEvent(DroneDropJump, box, {player})
+        Trace(player, "RequestJump after")
+    }
+
+    func Trace(player entity<Player>, message string) {
+        if !DroneDropDiagnostics.DebugLog { return }
+        var uid = "nil"
+        if player != nil { uid = ToString(player<Player>.UserUID) }
+        LogInfo("[DroneJump] uid=" + uid + " " + message)
+    }
+}

@@ -1,0 +1,355 @@
+{
+  "_entityName": "Root",
+  "_tag": {
+    "type": "UIRootEntity",
+    "resourceId": ""
+  },
+  "_entityId": "cKp8FdU4",
+  "children": [
+    {
+      "_entityName": "JumpButton",
+      "_tag": {
+        "type": "UIButtonEntity",
+        "resourceId": ""
+      },
+      "_entityId": "LCfSbQgy",
+      "children": [
+        {
+          "_entityName": "JumpLabel",
+          "_tag": {
+            "type": "UITextEntity",
+            "resourceId": ""
+          },
+          "_entityId": "tSJa4scO",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "propsData": {
+            "activeSelf": true,
+            "transform": {
+              "rotate": 0,
+              "anchorMin": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "anchorMax": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "anchoredPosition": {
+                "x": 0,
+                "y": 0
+              },
+              "sizeDelta": {
+                "x": 240,
+                "y": 90
+              }
+            },
+            "alpha": 100,
+            "priority": 11,
+            "text": {
+              "value": "JUMP",
+              "key": "",
+              "font": "Default",
+              "fontSize": 38,
+              "fontStyle": {
+                "bold": false,
+                "italic": false,
+                "underline": false
+              },
+              "color": "#20252B",
+              "alignment": {
+                "h": "center",
+                "v": "middle"
+              },
+              "lineSpacing": 0,
+              "background": false,
+              "backgroundColor": "#e7b200",
+              "overflow": 0,
+              "backgroundRGBA": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0
+              },
+              "shadow": false,
+              "shadowColor": "#000000",
+              "shadowOffset": {
+                "x": 1,
+                "y": 1
+              },
+              "shadowAlpha": 1,
+              "gradient": 0,
+              "gradientTop": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "gradientBottom": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "outline": false,
+              "outlineColor": "#000000",
+              "outlineAlpha": 1,
+              "outlineOffset": 1
+            }
+          },
+          "ecaScripts": [],
+          "ecaProps": {},
+          "componentList": [],
+          "entityTagData": {
+            "tagPointers": []
+          }
+        }
+      ],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "propsData": {
+        "activeSelf": true,
+        "transform": {
+          "rotate": 0,
+          "anchorMin": {
+            "x": 0.5,
+            "y": 0
+          },
+          "anchorMax": {
+            "x": 0.5,
+            "y": 0
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "anchoredPosition": {
+            "x": 0,
+            "y": 100
+          },
+          "sizeDelta": {
+            "x": 260,
+            "y": 100
+          }
+        },
+        "alpha": 100,
+        "priority": 10,
+        "button": {
+          "spriteName": {
+            "fileId": "4fea53c19488f972a3e911c826b1bea7",
+            "filePath": "lib://fftextures/WorkshopIconLibrary/UGC_Btn_02_Big_Normal.png",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "texture"
+          },
+          "normal": "#FFFFFF",
+          "highlight": "#e2a222",
+          "pressed": "#C5C5C5",
+          "disabled": "#494949",
+          "onClicks": [],
+          "enableBorderImage": true,
+          "clickHandlers": [],
+          "disableCollider": false,
+          "fillType": 1,
+          "slicedBorder": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "tiledBorder": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "centerInvisible": false,
+          "fillDir": 0,
+          "fillAmount": 0,
+          "invertFill": false,
+          "reverse": {
+            "x": false,
+            "y": false
+          },
+          "flip": 0,
+          "gradient": 1,
+          "gradientTop": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "gradientBottom": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          }
+        }
+      },
+      "ecaScripts": [
+        {
+          "fileId": "fpk2eqrg1yu-mw96t99d-9t8h9bt2yco",
+          "filePath": "Assets\\ECA\\DroneJumpHUDServer.fcg",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        }
+      ],
+      "ecaProps": {},
+      "componentList": [],
+      "entityTagData": {
+        "tagPointers": []
+      }
+    },
+    {
+      "_entityName": "LookAroundTouchPad",
+      "_tag": {
+        "type": "UITouchPadEntity",
+        "resourceId": ""
+      },
+      "_entityId": "PJB8ci6D",
+      "children": [],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "propsData": {
+        "activeSelf": true,
+        "transform": {
+          "rotate": 0,
+          "anchorMin": {
+            "x": 0,
+            "y": 0.2199999988079071
+          },
+          "anchorMax": {
+            "x": 1,
+            "y": 1
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "anchoredPosition": {
+            "x": 0,
+            "y": 0
+          },
+          "sizeDelta": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "alpha": 20,
+        "priority": 0,
+        "touchPad": {
+          "allowPressedOutside": false,
+          "disableCollider": false
+        }
+      },
+      "ecaScripts": [
+        {
+          "fileId": "d6gez00ct14-mw995ps7-gt00yvoroem",
+          "filePath": "Assets\\ECA\\DroneJumpLookClient.fcg",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        }
+      ],
+      "ecaProps": {},
+      "componentList": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "aiPrompt": "Transparent look-around input surface; JUMP is layered above it. Camera is local to this HUD owner."
+    }
+  ],
+  "prefabVariant": null,
+  "activeValue": {
+    "selfValue": true,
+    "valueTag": "activeValue"
+  },
+  "unlockedValue": {
+    "selfValue": true,
+    "valueTag": "unlockedValue"
+  },
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "propsData": {
+    "activeSelf": true,
+    "transform": {
+      "rotate": 0,
+      "anchorMin": {
+        "x": 0,
+        "y": 0
+      },
+      "anchorMax": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "anchoredPosition": {
+        "x": 750,
+        "y": 375
+      },
+      "sizeDelta": {
+        "x": 1500,
+        "y": 750
+      }
+    },
+    "alpha": 100,
+    "priority": 0
+  },
+  "ecaScripts": [
+    {
+      "fileId": "0aca6w2rltsg-mw97ic8x-jx3cdr6b0p",
+      "filePath": "Assets\\ECA\\DroneJumpRelay.eca",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "eca"
+    }
+  ],
+  "ecaProps": {},
+  "componentList": [],
+  "entityTagData": {
+    "tagPointers": []
+  },
+  "IsUIRootLike": true,
+  "layer": 0,
+  "discriminator": "ISceneLike",
+  "version": 3
+}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

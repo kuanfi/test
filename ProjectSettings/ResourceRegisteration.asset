@@ -6,11 +6,51 @@
   "Resource": {
     "ui": {
       "id": "ui",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "sgqfhofmfsp-mw96ohhz-0zj681cf55q",
+            "filePath": "Assets\\UI\\DroneJumpHUD.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "DroneJumpHUD",
+          "children": [
+            {
+              "id": "LCfSbQgy",
+              "scriptName": "JumpButton"
+            },
+            {
+              "id": "PJB8ci6D",
+              "scriptName": "LookAroundTouchPad"
+            }
+          ]
+        }
+      ]
     },
     "scene": {
       "id": "scene",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "eysb07aklem-mw3gx2bz-nf3naagrfcb",
+            "filePath": "Assets\\Scene\\BR Bermuda.scene",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "scene"
+          },
+          "scriptName": "BRBermuda",
+          "children": [
+            {
+              "id": "SrYjXvmX",
+              "scriptName": "DroneDropBox"
+            }
+          ]
+        }
+      ]
     },
     "prefab": {
       "id": "prefab",
@@ -18,19 +58,97 @@
     },
     "ugcscript": {
       "id": "ugcscript",
-      "children": []
-    },
-    "ugcscriptclient": {
-      "id": "ugcscriptclient",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "d4yvuubqm3s-mw96t96y-icm9cpwbejh",
+            "filePath": "Assets\\ECA\\DroneDropServer.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "DroneDropServer",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "fpk2eqrg1yu-mw96t99d-9t8h9bt2yco",
+            "filePath": "Assets\\ECA\\DroneJumpHUDServer.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "DroneJumpHUDServer",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "au59egoynxj-mw96t98h-pky32ihrsk",
+            "filePath": "Assets\\ECA\\DroneJumpCameraClient.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "DroneJumpCameraClient",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "d6gez00ct14-mw995ps7-gt00yvoroem",
+            "filePath": "Assets\\ECA\\DroneJumpLookClient.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "DroneJumpLookClient",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "kvg9moik0v-mw99ezy3-xs8dpsaaakb",
+            "filePath": "Assets\\ECA\\DroneDropRuntimeProbe.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "DroneDropRuntimeProbe",
+          "children": []
+        }
+      ]
     },
     "eca": {
       "id": "eca",
-      "children": []
-    },
-    "ecaclient": {
-      "id": "ecaclient",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+            "filePath": "Assets\\ECA\\BermudaBRRules.eca",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "eca"
+          },
+          "scriptName": "BermudaBRRules",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "0aca6w2rltsg-mw97ic8x-jx3cdr6b0p",
+            "filePath": "Assets\\ECA\\DroneJumpRelay.eca",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "eca"
+          },
+          "scriptName": "DroneJumpRelay",
+          "children": []
+        }
+      ]
     },
     "texture": {
       "id": "texture",
@@ -79,7 +197,44 @@
     "textureResource": {
       "id": "textureResource",
       "children": []
+    },
+    "mesh": {
+      "id": "mesh",
+      "children": []
+    },
+    "material": {
+      "id": "material",
+      "children": []
+    },
+    "ac": {
+      "id": "ac",
+      "children": []
+    },
+    "particles": {
+      "id": "particles",
+      "children": []
+    },
+    "playerdata": {
+      "id": "playerdata",
+      "children": []
+    },
+    "pd": {
+      "id": "pd",
+      "children": []
+    },
+    "xbt": {
+      "id": "xbt",
+      "children": []
+    },
+    "pfm": {
+      "id": "pfm",
+      "children": []
+    },
+    "skilltype": {
+      "id": "skilltype",
+      "children": []
     }
-  }
+  },
+  "children": []
 }
-//"{FE:{"v":"0.1.2974255","c":{"FF":4404},"s":100}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

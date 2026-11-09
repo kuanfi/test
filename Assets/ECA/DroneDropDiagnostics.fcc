@@ -1,0 +1,5 @@
+// Shared by server and client. Set this single boolean to false to silence diagnostics.
+[element bool]
+enum DroneDropDiagnostics {
+    DebugLog = true
+}

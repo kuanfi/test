@@ -1,0 +1,12 @@
+import "StdLibrary.fcc" as StdLib
+import "Hud.fcc" as HudLib
+import "./DroneJumpCameraClient.fcg" as BoxCamera
+
+[platform_client]
+graph DroneJumpLookClient {
+    event OnDrag(player entity<Player>, startPosition Vector2, delta Vector2) {
+        var localPlayer = StdLib.GetLocalPlayer()
+        if localPlayer == nil || player != localPlayer { return }
+        localPlayer<BoxCamera>.LookAround(delta)
+    }
+}

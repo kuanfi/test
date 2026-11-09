@@ -1,0 +1,22 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Convert.fcc" as ConvertLib
+import "./DroneDropDiagnostics.fcc" as DiagnosticsLib
+import __AssetsA3ECAA3BermudaBRRulesneca__ as BRRules from "EditorGenLib.fcc"
+
+[platform_server]
+graph DroneDropRuntimeProbe {
+    event OnGameStart() {
+        if !DroneDropDiagnostics.DebugLog { return }
+        wait StdLib.WaitForMillisecond(15000)
+        Report()
+        wait StdLib.WaitForMillisecond(60000)
+        Report()
+    }
+
+    func Report() {
+        var box entity = EResSceneBRBermuda.DroneDropBox
+        var message = "Server probe: box=nil " + ToString(box == nil) + " safeZoneOpened=" + ToString(thisEntity<BRRules>.safeZoneOpened)
+        StdLib.BroadcastCustomEvent(DroneCameraProbe, PlatformType.Client, {message})
+    }
+}

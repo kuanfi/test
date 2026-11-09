@@ -18,7 +18,7 @@
   "editorVisibleValue": true,
   "modId": 39,
   "DisableReconnect": false,
-  "RecommendStartGameNumber": 32,
+  "RecommendStartGameNumber": 4,
   "EnableHalfwayJoin": false,
   "EnableHalfwayJoinEffectTime": true,
   "HalfwayJoinEffectTime": 120,
@@ -61,6 +61,14 @@
         "type": "GFileRefer"
       },
       "fileType": "eca"
+    },
+    {
+      "fileId": "kvg9moik0v-mw99ezy3-xs8dpsaaakb",
+      "filePath": "Assets\\ECA\\DroneDropRuntimeProbe.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "_entityName": "T_43_YU_WS_MODULE_GLOBAL",

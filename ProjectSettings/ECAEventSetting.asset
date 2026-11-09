@@ -3,7 +3,131 @@
     "type": "ecaEventDesc"
   },
   "_entityId": "zXGgh24t",
-  "customEventDefines": {},
-  "customName": {}
+  "customEventDefines": {
+    "signal_40136290": {
+      "name": "DroneDropEnroll",
+      "enitityType": "Entity",
+      "typeID": 100004,
+      "propCount": 2,
+      "props": [
+        {
+          "name": "player",
+          "value": "Player",
+          "key": 0
+        },
+        {
+          "name": "rules",
+          "value": "Global",
+          "key": 1
+        }
+      ],
+      "apiTargetV2": "server",
+      "key": "signal_40136290"
+    },
+    "signal_84689613": {
+      "name": "DroneDropCleanup",
+      "enitityType": "Entity",
+      "typeID": 100005,
+      "propCount": 2,
+      "props": [
+        {
+          "name": "player",
+          "value": "Player",
+          "key": 0
+        },
+        {
+          "name": "source",
+          "value": "String",
+          "key": 1
+        }
+      ],
+      "apiTargetV2": "server",
+      "key": "signal_84689613"
+    },
+    "signal_44021385": {
+      "name": "DroneDropJump",
+      "enitityType": "Entity",
+      "typeID": 100006,
+      "propCount": 1,
+      "props": [
+        {
+          "name": "player",
+          "value": "Player",
+          "key": 0
+        }
+      ],
+      "apiTargetV2": "server",
+      "key": "signal_44021385"
+    },
+    "signal_23433815": {
+      "name": "DroneCameraState",
+      "enitityType": "Player",
+      "typeID": 100007,
+      "propCount": 3,
+      "props": [
+        {
+          "name": "player",
+          "value": "Player",
+          "key": 0
+        },
+        {
+          "name": "box",
+          "value": "Entity",
+          "key": 1
+        },
+        {
+          "name": "active",
+          "value": "Bool",
+          "key": 2
+        }
+      ],
+      "apiTargetV2": "client",
+      "key": "signal_23433815"
+    },
+    "signal_77924140": {
+      "name": "DroneCameraProbe",
+      "enitityType": "Player",
+      "typeID": 100008,
+      "propCount": 1,
+      "props": [
+        {
+          "name": "message",
+          "value": "String",
+          "key": 0
+        }
+      ],
+      "apiTargetV2": "client",
+      "key": "signal_77924140"
+    },
+    "signal_67868491": {
+      "name": "DroneJumpTrace",
+      "enitityType": "Entity",
+      "typeID": 100009,
+      "propCount": 2,
+      "props": [
+        {
+          "name": "player",
+          "value": "Player",
+          "key": 0
+        },
+        {
+          "name": "message",
+          "value": "String",
+          "key": 1
+        }
+      ],
+      "apiTargetV2": "server",
+      "key": "signal_67868491"
+    }
+  },
+  "customName": {
+    "DroneDropEnroll": "signal_40136290",
+    "DroneDropJump": "signal_44021385",
+    "DroneDropCleanup": "signal_84689613",
+    "DroneCameraState": "signal_23433815",
+    "DroneCameraProbe": "signal_77924140",
+    "DroneJumpTrace": "signal_67868491"
+  },
+  "children": []
 }
-//"{FE:{"v":"0.1.2974255","c":{"FF":4404},"s":100}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

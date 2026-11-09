@@ -6,10 +6,39 @@
   "_entityId": "qOlI3yVa",
   "children": [],
   "prefabVariant": null,
-  "activeValue": null,
-  "unlockedValue": null,
+  "activeValue": {
+    "selfValue": true,
+    "valueTag": "activeValue"
+  },
+  "unlockedValue": {
+    "selfValue": true,
+    "valueTag": "unlockedValue"
+  },
   "editorLockValue": false,
   "editorVisibleValue": true,
-  "TypeDefines": {}
+  "TypeDefines": {
+    "Player": {
+      "label": "Player",
+      "name": "Player",
+      "bases": [
+        "FightingEntity",
+        "ScoreableEntity",
+        "RankableEntity",
+        "Visibility",
+        "BuffableEntity",
+        "FormulableEntity",
+        "AnimationControllerAble"
+      ],
+      "ecaScripts": [
+        {
+          "fileId": "au59egoynxj-mw96t98h-pky32ihrsk",
+          "path": ""
+        }
+      ],
+      "typeID": 14,
+      "PropDefines": [],
+      "IsPartial": true
+    }
+  }
 }
-//"{FE:{"v":"0.1.2974255","c":{"FF":4404},"s":100}
+//"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

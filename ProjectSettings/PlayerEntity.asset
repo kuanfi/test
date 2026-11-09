@@ -52,9 +52,29 @@
   },
   "editorLockValue": false,
   "editorVisibleValue": true,
-  "ecaProps": {},
+  "ecaProps": {
+    "Player": {},
+    "FightingEntity": {},
+    "AimableEntity": {},
+    "Entity": {},
+    "ScoreableEntity": {},
+    "RankableEntity": {},
+    "Visibility": {},
+    "BuffableEntity": {},
+    "FormulableEntity": {},
+    "AnimationControllerAble": {}
+  },
   "ecaScript": null,
-  "ecaScripts": [],
+  "ecaScripts": [
+    {
+      "fileId": "au59egoynxj-mw96t98h-pky32ihrsk",
+      "filePath": "Assets\\ECA\\DroneJumpCameraClient.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    }
+  ],
   "avatarInfo": null,
   "usePDV2": true,
   "sceneData": {
@@ -263,7 +283,8 @@
     "EnableCheckPlayerMatchState": false,
     "EnableDownloadOnDemand": false,
     "max_ugc_dash_speed_up_scale": 4.6,
-    "max_ugc_run_speed_up_scale": 4
+    "max_ugc_run_speed_up_scale": 4,
+    "receive_damage": 100
   },
   "physicsData": {
     "ECCTParam_Gravity": {
@@ -292,6 +313,7 @@
   "modOpen": true,
   "avatarType": 0,
   "genderType": 0,
-  "showSwitch": false
+  "showSwitch": false,
+  "genderText": ""
 }
 //"{FE:{"v":"1.19.4689915","c":{"FF":5001},"s":100}

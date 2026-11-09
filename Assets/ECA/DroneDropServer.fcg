@@ -1,0 +1,279 @@
+import "StdLibrary.fcc" as StdLib
+import "Player.fcc" as PlayerLib
+import "Hud.fcc" as HudLib
+import "Math.fcc" as MathLib
+import "Map.fcc" as MapLib
+import "List.fcc" as ListLib
+import "EditorGenLib.fcc" as EditorLib
+import "Convert.fcc" as ConvertLib
+import "./DroneDropDiagnostics.fcc" as DiagnosticsLib
+import __AssetsA3ECAA3BermudaBRRulesneca__ as BRRules from "EditorGenLib.fcc"
+
+[platform_server]
+graph DroneDropServer {
+    // Heights are offsets above safeZoneCenter.Y; safe-zone settings stay in BRRules.
+    BoxHeight float = 150
+    BoxSpeed float = 20
+    AutoJumpSeconds float = 30
+    rulesEntity entity<Global>
+    zoneStartMs int64 = 0
+    phaseStartMs int = 0
+    lastUpdateMs int = 0
+    active bool = false
+    targetPosition Vector3
+    pendingCount int = 0
+    participants List<UUID> = List<UUID>{}
+    playerByUID Map<UUID, entity<Player>> = Map<UUID, entity<Player>>{}
+    hasJumped Map<UUID, bool> = Map<UUID, bool>{}
+    hudByUID Map<UUID, entity<CustomUI>> = Map<UUID, entity<CustomUI>>{}
+    previousInvincible Map<UUID, bool> = Map<UUID, bool>{}
+
+    event OnAwake() { Trace(nil, "Box server OnAwake") }
+
+    func Trace(player entity<Player>, message string) {
+        if !DroneDropDiagnostics.DebugLog { return }
+        var uid = "nil"
+        if player != nil { uid = ToString(player<Player>.UserUID) }
+        LogInfo("[DroneJump] uid=" + uid + " " + message)
+    }
+
+    event DroneDropEnroll(player entity<Player>, rules entity<Global>) {
+        Trace(player, "Enroll entry")
+        if player == nil || rules == nil { Trace(player, "Enroll skip: nil player/rules")
+            return }
+        if !rules<BRRules>.safeZoneOpened { Trace(player, "Enroll skip: safeZoneOpened=false")
+            return }
+        // Existing bots retain the random sky-drop path; newly filled bots already use it.
+        if player<Player>.IsMonster {
+            Trace(player, "Enroll skip: bot; existing sky-drop")
+            rules<BRRules>.SkyDropPlayer(player)
+            return
+        }
+        if rulesEntity == nil || zoneStartMs != rules<BRRules>.safeZoneStartMs {
+            ResetPhase("Enroll new safe-zone phase")
+            rulesEntity = rules
+            zoneStartMs = rules<BRRules>.safeZoneStartMs
+            phaseStartMs = rules<Global>.GameTimeCount
+            lastUpdateMs = phaseStartMs
+            thisEntity<Transform>.Position = RandomPoint()
+            targetPosition = RandomPoint()
+            active = true
+            thisEntity<Visibility>.IsVisible = true
+        }
+        // A delayed enrollment must never reopen an already completed phase.
+        if !active { Trace(player, "Enroll skip: phase ended")
+            return }
+        var uid = player<Player>.UserUID
+        if MapLib.ContainKey(hasJumped, uid) { Trace(player, "Enroll skip: already enrolled/tombstoned")
+            return }
+        // Death records this before ReviveOnNextFrame, including before phase init.
+        // This survives ResetPhase and explicitly preserves the existing revive drop.
+        if ListLib.Contain(rules<BRRules>.freeReviveUsed, uid) {
+            Trace(player, "Enroll skip: revive sky-drop")
+            return
+        }
+        if !ListLib.Contain(GetAllPlayers(), player) {
+            Trace(player, "Enroll skip: disconnected")
+            return
+        }
+        if player<Player>.PlayerStatus != PlayerStateType.Alive {
+            Trace(player, "Enroll skip: not alive")
+            hasJumped[uid] = true
+            return
+        }
+        hasJumped[uid] = false
+        Append(participants, uid)
+        playerByUID[uid] = player
+        previousInvincible[uid] = player<Player>.Invincible
+        player<Player>.Invincible = true
+        pendingCount += 1
+        AddAOISpecialFollow(thisEntity, player)
+        SwitchAOIProxyObserver(player, thisEntity<Transform>)
+        CreateCustomUI(out var hud, player, EResUI.DroneJumpHUD)
+        hudByUID[uid] = hud
+        // Fail open into the existing drop helper if UI creation fails.
+        if hud == nil {
+            if DroneDropDiagnostics.DebugLog { LogError("[DroneDrop] uid=" + ToString(uid) + " CreateCustomUI=nil; fail-open Jump") }
+            Jump(player)
+        } else {
+            Trace(player, "CreateCustomUI=ok")
+            BroadcastCustomEvent(DroneCameraState, PlatformType.Client, {player, thisEntity, true})
+            Trace(player, "Camera start sent")
+        }
+    }
+
+    event DroneDropCleanup(player entity<Player>, source string) {
+        Trace(player, "Cleanup entry source=" + source)
+        // Never turn an unrelated cleanup of a living, unenrolled player into a tombstone.
+        if player != nil && !MapLib.ContainKey(hasJumped, player<Player>.UserUID) {
+            if source == "revive" || source == "disconnect" || player<Player>.PlayerStatus != PlayerStateType.Alive {
+                hasJumped[player<Player>.UserUID] = true
+                Trace(player, "Cleanup before enroll: excluded dead/disconnected/revived")
+            } else { Trace(player, "Cleanup before enroll: ignored alive player") }
+            return
+        }
+        CleanupPlayer(player)
+    }
+
+    event DroneDropJump(player entity<Player>) {
+        Trace(player, "DroneDropJump entry")
+        Jump(player)
+    }
+
+    // ECA emits these at the actual relay/helper execution points.
+    event DroneJumpTrace(player entity<Player>, message string) {
+        Trace(player, message)
+        if player != nil { Trace(player, "ECA checkpoint playerPosition=" + ToString(player<Transform>.Position)) }
+    }
+
+    func CurrentRadius() float {
+        // Share the exact radius calculation with initial and revive sky-drops.
+        return rulesEntity<BRRules>.GetSkyDropRadius()
+    }
+
+    func RandomPoint() Vector3 {
+        var center = rulesEntity<BRRules>.safeZoneCenter
+        var angle = RandomFloat(0.0, 360.0)
+        var radius = CurrentRadius() * Sqrt(RandomFloat(0.0, 1.0)) * rulesEntity<BRRules>.SkyDropMargin
+        return Vector3{center.X + radius * Cos(angle), center.Y + BoxHeight, center.Z + radius * Sin(angle)}
+    }
+
+    func ConstrainPosition(position Vector3) Vector3 {
+        var center = rulesEntity<BRRules>.safeZoneCenter
+        var offset = Vector3{position.X - center.X, 0, position.Z - center.Z}
+        var limit = CurrentRadius() * rulesEntity<BRRules>.SkyDropMargin
+        var distance = Distance(offset, Vector3{0, 0, 0})
+        if distance > limit && distance > 0.0 {
+            var factor = limit / distance
+            offset = Vector3{offset.X * factor, 0, offset.Z * factor}
+        }
+        return Vector3{center.X + offset.X, center.Y + BoxHeight, center.Z + offset.Z}
+    }
+
+    event OnUpdate() {
+        if !active { return }
+        if !rulesEntity<BRRules>.safeZoneOpened {
+            Trace(nil, "OnUpdate ResetPhase: safeZoneOpened=false pendingCount=" + ToString(pendingCount))
+            ResetPhase("OnUpdate safeZoneOpened=false")
+            return }
+        var now = rulesEntity<Global>.GameTimeCount
+        var dt = MathLib.Min(0.25, (now - lastUpdateMs) as float / 1000.0) as float
+        lastUpdateMs = now
+        var position = ConstrainPosition(thisEntity<Transform>.Position)
+        targetPosition = ConstrainPosition(targetPosition)
+        var distance = Distance(position, targetPosition)
+        if distance <= 0.25 {
+            targetPosition = RandomPoint()
+        } else {
+            var direction = Normalize(targetPosition - position)
+            var step = MathLib.Min(distance, BoxSpeed * dt) as float
+            position = ConstrainPosition(Vector3{position.X + direction.X * step, position.Y, position.Z + direction.Z * step})
+            thisEntity<Transform>.Forward = direction
+        }
+        thisEntity<Transform>.Position = position
+        var connected = GetAllPlayers()
+        for i, uid in participants {
+            if !hasJumped[uid] {
+                var player = playerByUID[uid]
+                if player == nil || !ListLib.Contain(connected, player) {
+                    Trace(player, "Cleanup entry source=update-disconnect")
+                    CleanupByUID(uid, player)
+                } else if player<Player>.PlayerStatus != PlayerStateType.Alive {
+                    Trace(player, "Cleanup entry source=update-not-alive")
+                    CleanupByUID(uid, player)
+                } else if (now - phaseStartMs) as float >= AutoJumpSeconds * 1000.0 {
+                    Trace(player, "AutoJump timeout")
+                    Jump(player)
+                }
+            }
+        }
+        if pendingCount == 0 { FinishPhase("OnUpdate no pending players") }
+    }
+
+    func Jump(player entity<Player>) {
+        Trace(player, "Jump entry")
+        if player == nil { Trace(player, "Jump refused: player=nil")
+            return }
+        var uid = player<Player>.UserUID
+        if !active { Trace(player, "Jump refused: active=false")
+            return }
+        if !MapLib.ContainKey(hasJumped, uid) { Trace(player, "Jump refused: uid not enrolled (ResetPhase/tombstone)")
+            return }
+        if hasJumped[uid] { Trace(player, "Jump refused: already jumped/cleaned (tombstone)")
+            return }
+        if player<Player>.PlayerStatus != PlayerStateType.Alive {
+            Trace(player, "Jump refused: not alive")
+            CleanupPlayer(player)
+            return
+        }
+        // Read and constrain the actual box position at the moment of the server callback.
+        var position = ConstrainPosition(thisEntity<Transform>.Position)
+        thisEntity<Transform>.Position = position
+        var center = rulesEntity<BRRules>.safeZoneCenter
+        var forward = Vector3{center.X - position.X, 0, center.Z - position.Z}
+        if Distance(forward, Vector3{0, 0, 0}) < 0.001 { forward = Vector3{0, 0, 1} }
+        // Keep the callback's widget alive until the teleport/chute helper has returned.
+        // Cleanup still commits the tombstone and restores camera, invincibility and AOI first.
+        var jumpHUD = hudByUID[uid]
+        MapLib.Remove(hudByUID, uid)
+        CleanupPlayer(player)
+        // Single existing teleport/parachute implementation: no copied chute parameters.
+        Trace(player, "SkyDropAt call position=" + ToString(position) + " forward=" + ToString(Normalize(forward)))
+        rulesEntity<BRRules>.SkyDropAt(player, position, Normalize(forward))
+        Trace(player, "SkyDropAt returned playerPosition=" + ToString(player<Transform>.Position) + " distanceToBox=" + ToString(Distance(player<Transform>.Position, position)))
+        if jumpHUD != nil { DestroyCustomUI(jumpHUD) }
+        Trace(player, "Jump HUD destroyed")
+        if pendingCount == 0 { FinishPhase("Jump last pending player") }
+    }
+
+    func CleanupPlayer(player entity<Player>) {
+        if player == nil { return }
+        var uid = player<Player>.UserUID
+        if !MapLib.ContainKey(hasJumped, uid) {
+            Trace(player, "Cleanup before enroll: ignored")
+            return
+        }
+        CleanupByUID(uid, player)
+    }
+
+    func CleanupByUID(uid UUID, player entity<Player>) {
+        if hasJumped[uid] { return }
+        hasJumped[uid] = true
+        pendingCount -= 1
+        if player != nil {
+            BroadcastCustomEvent(DroneCameraState, PlatformType.Client, {player, thisEntity, false})
+            Trace(player, "Camera stop sent")
+            player<Player>.Invincible = previousInvincible[uid]
+            RemoveAOISpecialFollow(thisEntity, player)
+            SwitchAOIProxyObserver(player, player)
+            Trace(player, "Cleanup restored invincible=" + ToString(player<Player>.Invincible) + " AOI=player")
+        }
+        var hud = hudByUID[uid]
+        if hud != nil { DestroyCustomUI(hud) }
+        MapLib.Remove(hudByUID, uid)
+        MapLib.Remove(previousInvincible, uid)
+        MapLib.Remove(playerByUID, uid)
+    }
+
+    func FinishPhase(source string) {
+        Trace(nil, "FinishPhase source=" + source + " pendingCount=" + ToString(pendingCount))
+        active = false
+        thisEntity<Visibility>.IsVisible = false
+    }
+
+    func ResetPhase(source string) {
+        Trace(nil, "ResetPhase source=" + source + " pendingCount=" + ToString(pendingCount))
+        for i, uid in participants {
+            if !hasJumped[uid] { CleanupByUID(uid, playerByUID[uid]) }
+        }
+        participants = List<UUID>{}
+        playerByUID = Map<UUID, entity<Player>>{}
+        hasJumped = Map<UUID, bool>{}
+        hudByUID = Map<UUID, entity<CustomUI>>{}
+        previousInvincible = Map<UUID, bool>{}
+        pendingCount = 0
+        FinishPhase("ResetPhase: " + source)
+    }
+
+    event OnDestroy() { ResetPhase("OnDestroy") }
+}

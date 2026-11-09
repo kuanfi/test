@@ -1,0 +1,154 @@
+import "StdLibrary.fcc" as StdLib
+import "Player.fcc" as PlayerLib
+import "Camera.fcc" as CameraLib
+import "Hud.fcc" as HudLib
+import "Math.fcc" as MathLib
+import "EditorGenLib.fcc" as EditorLib
+import "Convert.fcc" as ConvertLib
+import "./DroneDropDiagnostics.fcc" as DiagnosticsLib
+
+[platform_client]
+graph DroneJumpCameraClient {
+    CameraOffset Vector3 = Vector3{0, 6, -12}
+    LookSensitivity float = 0.15
+    MinPitch float = -75
+    MaxPitch float = 75
+    InitialPitch float = 20
+    camera entity<CustomCamera>
+    box entity
+    requested bool = false
+    yaw float = 0
+    pitch float = 20
+    initialized bool = false
+    nextFailureLogMs int = 0
+    nextPoseLogMs int = 0
+    nextDragLogMs int = 0
+    lastLoggedBoxPosition Vector3
+
+    func Trace(message string) {
+        if !DroneDropDiagnostics.DebugLog { return }
+        var player = GetLocalPlayer()
+        if player != nil && thisEntity != player { return }
+        var uid = "nil"
+        if player != nil { uid = ToString(player<Player>.UserUID) }
+        LogInfo("[DroneCamera] uid=" + uid + " " + message)
+    }
+
+    func TraceFailure(reason string) {
+        if !DroneDropDiagnostics.DebugLog { return }
+        var now = globalEntity<Global>.GameTimeCount
+        if now < nextFailureLogMs { return }
+        nextFailureLogMs = now + 1000
+        Trace("TryInitialize wait: " + reason)
+    }
+
+    event OnAwake() {
+        Trace("Player controller OnAwake")
+    }
+
+    event OnEnable() {
+        Trace("Player controller OnEnable")
+    }
+
+    event DroneCameraProbe(message string) {
+        if thisEntity == GetLocalPlayer() { Trace(message) }
+    }
+
+    event DroneCameraState(player entity<Player>, boxEntity entity<Entity>, active bool) {
+        if player != GetLocalPlayer() || thisEntity != player { return }
+        if !active { StopBoxCamera()
+            return }
+        StartBoxCamera(boxEntity)
+    }
+
+    func StartBoxCamera(boxEntity entity) {
+        if thisEntity != GetLocalPlayer() { return }
+        box = boxEntity
+        requested = true
+        Trace("Controller received box nil=" + ToString(box == nil))
+        TryInitialize()
+    }
+
+    func TryInitialize() {
+        if initialized || !requested { return }
+        // HUD and scene entities can arrive on different network frames.
+        if box == nil { TraceFailure("box=nil")
+            return }
+        if !HasComponent(box, typeof(Transform)) { TraceFailure("box has no Transform")
+            return }
+        CreateCustomCamera(out var createdCamera)
+        camera = createdCamera
+        if camera == nil { TraceFailure("CreateCustomCamera=nil")
+            return }
+        camera<CustomCamera>.FOV = 75
+        yaw = 0
+        pitch = InitialPitch
+        lastLoggedBoxPosition = box<Transform>.Position
+        UpdatePose()
+        SwitchCustomCameraClient(camera, CameraTransitionType.Smooth, 300)
+        SetLocalPlayerMoveStatus(false)
+        initialized = true
+        Trace("Camera switched")
+        start FollowBox()
+    }
+
+    func UpdatePose() {
+        camera<Transform>.Position = box<Transform>.Position + CameraOffset
+        camera<Transform>.Rotation = Vector3{pitch, yaw, 0}
+    }
+
+    event OnUpdate() {
+        if thisEntity != GetLocalPlayer() { return }
+        if requested && !initialized { TryInitialize() }
+    }
+
+    async func FollowBox() {
+        var followingCamera = camera
+        while initialized && camera == followingCamera {
+            if box == nil || !HasComponent(box, typeof(Transform)) {
+                Trace("Follow stopped: box missing")
+                StopBoxCamera()
+                return
+            }
+            UpdatePose()
+            if DroneDropDiagnostics.DebugLog {
+                var now = globalEntity<Global>.GameTimeCount
+                if now >= nextPoseLogMs {
+                    nextPoseLogMs = now + 1000
+                    var position = box<Transform>.Position
+                    Trace("Box position=" + ToString(position) + " moved=" + ToString(Distance(position, lastLoggedBoxPosition)) + " cameraCurrent=" + ToString(GetCurrentCustomCameraClient() == camera))
+                    lastLoggedBoxPosition = position
+                }
+            }
+            wait StdLib.WaitForNextFrame()
+        }
+    }
+
+    // The HUD touch pad forwards input; it never owns or restores the camera.
+    func LookAround(delta Vector2) {
+        if !initialized { return }
+        yaw += delta.X * LookSensitivity
+        pitch = MathLib.Max(MinPitch, MathLib.Min(MaxPitch, pitch - delta.Y * LookSensitivity)) as float
+        if DroneDropDiagnostics.DebugLog {
+            var now = globalEntity<Global>.GameTimeCount
+            if now >= nextDragLogMs {
+                nextDragLogMs = now + 1000
+                Trace("Drag yaw=" + ToString(yaw) + " pitch=" + ToString(pitch))
+            }
+        }
+    }
+
+    func StopBoxCamera() {
+        requested = false
+        Trace("RestoreCamera initialized=" + ToString(initialized))
+        if !initialized { return }
+        initialized = false
+        SwitchCustomCameraClient(nil, CameraTransitionType.Default, 0)
+        SetLocalPlayerMoveStatus(true)
+        Destroy(camera)
+        camera = nil
+        box = nil
+    }
+
+    event OnDestroy() { StopBoxCamera() }
+}

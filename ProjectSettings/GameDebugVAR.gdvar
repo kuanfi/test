@@ -8,9 +8,24 @@
       "5of5vgn956q-mw3hobt7-7rk2lnbby8owaitingPlayerGet2026",
       "5of5vgn956q-mw3hobt7-7rk2lnbby8owaitingIndexGet2026",
       "5of5vgn956q-mw3hobt7-7rk2lnbby8oreturnPlayerGet2026",
-      "5of5vgn956q-mw3hobt7-7rk2lnbby8oparachutePlayerGetAfterWait2026",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_86",
       "5of5vgn956q-mw3hobt7-7rk2lnbby8obotIndexGet2026",
-      "5of5vgn956q-mw3hobt7-7rk2lnbby8onewBotForTeleport2026"
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_87",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_76",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_11",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_21",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_26",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_27",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_38",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_39",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_49",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_50",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_56",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_61",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_65",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_66",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_67",
+      "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_69"
     ]
   },
   "varMap": {
@@ -62,10 +77,10 @@
       "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
       "type": "Player"
     },
-    "5of5vgn956q-mw3hobt7-7rk2lnbby8oparachutePlayerGetAfterWait2026": {
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_86": {
       "id": "[parachutePlayersLoop2026I]dropPlayer",
       "name": "dropPlayer",
-      "blockId": "parachutePlayerGetAfterWait2026",
+      "blockId": "sd2026_86",
       "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
       "type": "Player"
     },
@@ -76,10 +91,115 @@
       "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
       "type": "int"
     },
-    "5of5vgn956q-mw3hobt7-7rk2lnbby8onewBotForTeleport2026": {
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_87": {
       "id": "[spawnBotAtSafeZone2026P3]newBot",
       "name": "newBot",
-      "blockId": "newBotForTeleport2026",
+      "blockId": "sd2026_87",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Player"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_76": {
+      "id": "[skyDropRevivedEvent2026P1]revivedPlayer",
+      "name": "revivedPlayer",
+      "blockId": "sd2026_76",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Player"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_11": {
+      "id": "[sdLocal_elapsedSecondsVD]elapsedSeconds",
+      "name": "elapsedSeconds",
+      "blockId": "sd2026_11",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_21": {
+      "id": "[sdLocal_liveRadiusVD]liveRadius",
+      "name": "liveRadius",
+      "blockId": "sd2026_21",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_26": {
+      "id": "[sdLocal_currentRadiusVD]currentRadius",
+      "name": "currentRadius",
+      "blockId": "sd2026_26",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_27": {
+      "id": "[sdLocal_liveRadiusVD]liveRadius",
+      "name": "liveRadius",
+      "blockId": "sd2026_27",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_38": {
+      "id": "[sdLocal_dropDistanceVD]dropDistance",
+      "name": "dropDistance",
+      "blockId": "sd2026_38",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_39": {
+      "id": "[sdLocal_dropAngleVD]dropAngle",
+      "name": "dropAngle",
+      "blockId": "sd2026_39",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_49": {
+      "id": "[sdLocal_dropDistanceVD]dropDistance",
+      "name": "dropDistance",
+      "blockId": "sd2026_49",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_50": {
+      "id": "[sdLocal_dropAngleVD]dropAngle",
+      "name": "dropAngle",
+      "blockId": "sd2026_50",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_56": {
+      "id": "[sdLocal_dropAngleVD]dropAngle",
+      "name": "dropAngle",
+      "blockId": "sd2026_56",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_61": {
+      "id": "[sdLocal_dropAngleVD]dropAngle",
+      "name": "dropAngle",
+      "blockId": "sd2026_61",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Float"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_65": {
+      "id": "[skyDropPlayer2026skyPlayerArg2026]skyPlayer",
+      "name": "skyPlayer",
+      "blockId": "sd2026_65",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Player"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_66": {
+      "id": "[sdLocal_dropPositionVD]dropPosition",
+      "name": "dropPosition",
+      "blockId": "sd2026_66",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Vector3"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_67": {
+      "id": "[sdLocal_dropForwardVD]dropForward",
+      "name": "dropForward",
+      "blockId": "sd2026_67",
+      "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
+      "type": "Vector3"
+    },
+    "5of5vgn956q-mw3hobt7-7rk2lnbby8osd2026_69": {
+      "id": "[skyDropPlayer2026skyPlayerArg2026]skyPlayer",
+      "name": "skyPlayer",
+      "blockId": "sd2026_69",
       "ecaId": "5of5vgn956q-mw3hobt7-7rk2lnbby8o",
       "type": "Player"
     }
